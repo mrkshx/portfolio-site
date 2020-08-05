@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
 import './App.css';
 
 class App extends Component {
@@ -8,7 +9,9 @@ class App extends Component {
     return (
       <Router>
         <Container fluid={true}>
-          <div>TEXT</div>
+          <Navbar className="border-bottom">
+            <Navbar.Brand>Markus Mengel</Navbar.Brand>
+          </Navbar>
         </Container>
       </Router>
     );
