@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import { Browserrouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div>TEXT</div>
+      <Router>
+        <Container fluid={true}>
+          <div>TEXT</div>
+        </Container>
+      </Router>
     );
   }
 }
