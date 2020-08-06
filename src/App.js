@@ -4,8 +4,12 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './App.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import HomePage from './pages/HomePage';
+
+library.add(fab);
 
 class App extends Component {
   constructor(props) {
