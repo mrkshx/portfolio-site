@@ -5,6 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './App.css';
 
+import HomePage from './pages/HomePage';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -38,6 +40,8 @@ class App extends Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
+
+          <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle} note={this.state.home.note} />} />
         </Container>
       </Router>
     );
