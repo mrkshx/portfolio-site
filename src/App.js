@@ -8,7 +8,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
-
+import skills_array from './constants/skills';
 import HomePage from './pages/HomePage';
 
 library.add(fab, fas);
@@ -20,7 +20,8 @@ class App extends Component {
       home: {
         title: 'Welcome',
         subtitle: 'This is my personal website!',
-        note: 'See my projects and feel free to contact me'
+        note: 'See my projects and feel free to contact me',
+        skills: skills_array
       },
       about: {
         title: 'About Me'
@@ -47,7 +48,7 @@ class App extends Component {
             </Navbar.Collapse>
           </Navbar>
 
-          <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle} note={this.state.home.note} />} />
+          <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle} note={this.state.home.note} skills={this.state.home.skills} />} />
         </Container>
       </Router>
     );

@@ -5,10 +5,17 @@ import SkillCard from '../components/skill_card';
 
 function HomePage(props) {
 
+  const showSkills = () => {
+    return props.skills.map(skill => {
+        return <SkillCard/>
+      });
+
+  }
+
   return(
     <div>
       <Hero title={props.title} subtitle={props.subtitle} note={props.note}></Hero>
-      <SkillCard/>
+      {showSkills()}
     </div>
   );
 }

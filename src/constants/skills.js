@@ -1,4 +1,4 @@
-const skills = [
+const skills_array = [
   {
     name: 'Javascript',
     symbol: 'js',
@@ -6,4 +6,4 @@ const skills = [
   }
 ];
 
-export default skills;
+export default skills_array;
