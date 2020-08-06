@@ -13,8 +13,8 @@ function Hero(props) {
         <Row>
           <Col>
             { props.title && <h1>{props.title}</h1> }
-            { props.subtitle && <h1>{props.subtitle}</h1> }
-            { props.note && <h1>{props.note}</h1> }
+            { props.subtitle && <h3>{props.subtitle}</h3> }
+            { props.note && <h3>{props.note}</h3> }
           </Col>
         </Row>
       </Container>
