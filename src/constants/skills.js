@@ -8,6 +8,21 @@ const skills_array = [
     name: 'Ruby',
     symbol: 'gem',
     symboltype: 'fas'
+  },
+  {
+    name: 'HTML',
+    symbol: 'html5',
+    symboltype: 'fab'
+  },
+  {
+    name: 'CSS',
+    symbol: 'css3',
+    symboltype: 'fab'
+  },
+  {
+    name: 'React',
+    symbol: 'react',
+    symboltype: 'fab'
   }
 ];
 
