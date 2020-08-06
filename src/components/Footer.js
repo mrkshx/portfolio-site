@@ -4,6 +4,8 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import '../assets/style/footer.css';
+
 
 function Footer() {
 
@@ -12,19 +14,24 @@ function Footer() {
       <Container fluid={true} >
         <Row className="border-top p-4 justify-content-between" >
           <Col>
-            <a href="https://www.linkedin.com/in/markus-mengel" target="_blank" rel="noopener noreferrer">
+            <a className="footer-link" href="https://www.linkedin.com/in/markus-mengel" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={['fab', 'linkedin']} size="3x"/>
             </a>
           </Col>
           <Col>
-            <a href="https://github.com/mrkshx/" target="_blank" rel="noopener noreferrer">
+            <a className="footer-link" href="https://github.com/mrkshx/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={['fab', 'github']} size="3x"/>
             </a>
           </Col>
           <Col>
-            <a href="https://www.xing.com/profile/Markus_Mengel3" target="_blank" rel="noopener noreferrer">
+            <a className="footer-link" href="https://www.xing.com/profile/Markus_Mengel3" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={['fab', 'xing']} size="3x"/>
             </a>
+          </Col>
+        </Row>
+        <Row ml-auto>
+          <Col className="text-right" >
+            This page was made by Markus Mengel // 2020
           </Col>
         </Row>
       </Container>
