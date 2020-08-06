@@ -25,6 +25,14 @@ class ContactPage extends Component {
     })
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    this.setState({
+      disabled: true,
+      emailSent: true
+    })
+  }
 
   render() {
     return (
@@ -44,9 +52,12 @@ class ContactPage extends Component {
             <Form.Control id="message" name="message" as="textarea" rows={5} value={this.state.message} onChange={this.handleChange} />
           </Form.Group>
 
-          <Button className="d-line-block" variant="primary" type="submit" disabled={this.state.disabled} >
+          <Button className="d-line-block mb-2" variant="primary" type="submit" disabled={this.state.disabled} >
             Send
           </Button>
+
+          {this.state.emailSent && <p className="alert alert-success" role="alert">Email sent</p>}
+          {this.state.emailSent === false && <p className="alert alert-danger" role="alert">Email NOT sent</p>}
         </Form>
       </div>
     );
