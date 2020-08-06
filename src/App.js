@@ -6,6 +6,23 @@ import Nav from 'react-bootstrap/Nav';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      home: {
+        title: 'Welcome',
+        subtitle: 'This is my personal website!',
+        note: 'See my projects and feel free to contact me'
+      },
+      about: {
+        title: 'About Me'
+      },
+      contact: {
+        title: 'Contact Me'
+      },
+    }
+  }
+
   render() {
     return (
       <Router>
