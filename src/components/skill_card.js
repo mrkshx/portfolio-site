@@ -6,7 +6,7 @@ function SkillCard(props) {
 
   return(
     <div>
-      <FontAwesomeIcon icon={['fas', 'gem']} size="6x" color="red"/>
+      <FontAwesomeIcon icon={[props.skill.symboltype, props.skill.symbol]} size="6x"/>
     </div>
   );
 }

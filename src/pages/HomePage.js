@@ -7,7 +7,7 @@ function HomePage(props) {
 
   const showSkills = () => {
     return props.skills.map(skill => {
-        return <SkillCard/>
+        return <SkillCard skill={skill} />
       });
 
   }
