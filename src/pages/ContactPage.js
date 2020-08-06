@@ -15,6 +15,17 @@ class ContactPage extends Component {
     }
   }
 
+  handleChange = (e) => {
+    const target = e.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    })
+  }
+
+
   render() {
     return (
       <div>
@@ -22,7 +33,7 @@ class ContactPage extends Component {
         <Form onSubmit={this.handleSubmit} >
           <Form.Group>
             <Form.Label htmlFor="full-name" >Full Name</Form.Label>
-            <Form.Control id="full-name" name="full-name" type="text" value={this.state.name} onChange={this.handleChange} />
+            <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
           </Form.Group>
           <Form.Group>
             <Form.Label htmlFor="email" >E-mail</Form.Label>
