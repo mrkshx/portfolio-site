@@ -10,6 +10,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 import skills_array from './constants/skills';
 import HomePage from './pages/HomePage';
+import Footer from './components/Footer';
 
 library.add(fab, fas);
 
@@ -47,8 +48,8 @@ class App extends Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-
           <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle} note={this.state.home.note} skills={this.state.home.skills} />} />
+          <Footer/>
         </Container>
       </Router>
     );
