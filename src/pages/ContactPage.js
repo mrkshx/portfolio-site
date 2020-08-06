@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Hero from '../components/hero';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 class ContactPage extends Component {
   constructor(props) {
@@ -14,7 +17,27 @@ class ContactPage extends Component {
 
   render() {
     return (
-      <p>Contact Test</p>
+      <div>
+        <Hero title={this.props.title} ></Hero>
+        <Form onSubmit={this.handleSubmit} >
+          <Form.Group>
+            <Form.Label htmlFor="full-name" >Full Name</Form.Label>
+            <Form.Control id="full-name" name="full-name" type="text" value={this.state.name} onChange={this.handleChange} />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="email" >E-mail</Form.Label>
+            <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="message" >Message</Form.Label>
+            <Form.Control id="message" name="message" as="textarea" rows={5} value={this.state.message} onChange={this.handleChange} />
+          </Form.Group>
+
+          <Button className="d-line-block" variant="primary" type="submit" disabled={this.state.disabled} >
+            Send
+          </Button>
+        </Form>
+      </div>
     );
   }
 }
