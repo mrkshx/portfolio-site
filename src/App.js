@@ -11,6 +11,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import skills_array from './constants/skills';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
 import Footer from './components/Footer';
 
 library.add(fab, fas);
@@ -51,6 +52,7 @@ class App extends Component {
           </Navbar>
           <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle} note={this.state.home.note} skills={this.state.home.skills} />} />
           <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title} />} />
+          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} />} />
           <Footer/>
         </Container>
       </Router>
