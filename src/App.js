@@ -52,7 +52,7 @@ class App extends Component {
           </Navbar>
           <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle} note={this.state.home.note} skills={this.state.home.skills} />} />
           <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title} />} />
-          <Route path='/about' exact render={() => <AboutPage title={this.state.contact.title} />} />
+          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} />} />
           <Footer/>
         </Container>
       </Router>
