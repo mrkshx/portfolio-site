@@ -11,6 +11,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import skills_array from './constants/skills';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
 import Footer from './components/Footer';
 
 library.add(fab, fas);
