@@ -29,7 +29,7 @@ function Footer() {
             </a>
           </Col>
         </Row>
-        <Row ml-auto>
+        <Row>
           <Col className="text-right" >
             This page was made by Markus Mengel // 2020
           </Col>
