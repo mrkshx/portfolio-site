@@ -19,7 +19,7 @@ jobs:
       - checkout
       - run:
           name: Install packages
-          command: npm install
+          command: yarn install
       - run:
           name: Build project
           command: yarn build
