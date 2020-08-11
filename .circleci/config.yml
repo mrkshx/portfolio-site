@@ -24,6 +24,9 @@ jobs:
           name: Build project
           command: yarn build
       - run:
+          name: Installing Firebase-Tools
+          command: yarn add firebase-tools
+      - run:
           name: Firebase Deploy
           command: firebase deploy --only hosting --token "$FIREBASE_TOKEN"
 workflows:
