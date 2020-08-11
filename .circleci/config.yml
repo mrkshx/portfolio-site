@@ -28,7 +28,7 @@ jobs:
           command: yarn add firebase-tools
       - run:
           name: Firebase Deploy
-          command: ./node_modules/.bin/firebase --only hosting --token "$FIREBASE_TOKEN"
+          command: ./node_modules/.bin/firebase deploy --only hosting --token "$FIREBASE_TOKEN"
 workflows:
   build_and_deploy:
     jobs:
