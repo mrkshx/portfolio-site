@@ -12,7 +12,26 @@ jobs:
       - run:
           name: Build project
           command: yarn build
+  deploy:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run:
+          name: Install packages
+          command: yarn install
+      - run:
+          name: Build project
+          command: yarn build
+      - run:
+          name: Installing Firebase-Tools
+          command: yarn add firebase-tools
+      - run:
+          name: Firebase Deploy
+          command: ./node_modules/.bin/firebase deploy --only hosting --token "$FIREBASE_TOKEN"
 workflows:
   build_and_deploy:
     jobs:
       - build
+      - deploy
+
