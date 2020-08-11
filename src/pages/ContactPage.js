@@ -34,7 +34,7 @@ class ContactPage extends Component {
       disabled: true
     })
 
-    Axios.post('http://localhost:3030/api/email', this.state)
+    Axios.post('https://us-central1-personalsite-291de.cloudfunctions.net/webApi/api/email', this.state)
       .then(res => {
           if(res.data.success) {
               this.setState({
