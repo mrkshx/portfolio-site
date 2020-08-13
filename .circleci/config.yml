@@ -12,6 +12,9 @@ jobs:
       - run:
           name: Build project
           command: yarn build
+      - run:
+          name: Install functions packages
+          command: cd ./functions && yarn install
   deploy:
     docker:
       - image: circleci/node:10
