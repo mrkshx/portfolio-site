@@ -16,7 +16,19 @@ jobs:
           name: Install functions packages
           command: cd ./functions && yarn install
   deploy:
+    docker:
+      - image: circleci/node:10
     steps:
+      - checkout
+      - run:
+          name: Install packages
+          command: yarn install
+      - run:
+          name: Build project
+          command: yarn build
+      - run:
+          name: Install functions packages
+          command: cd ./functions && yarn install
       - run:
           name: Installing Firebase-Tools
           command: yarn add firebase-tools
