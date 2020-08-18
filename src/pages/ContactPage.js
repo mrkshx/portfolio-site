@@ -77,7 +77,7 @@ class ContactPage extends Component {
               <Form.Control id="message" name="message" as="textarea" rows={5} value={this.state.message} onChange={this.handleChange} />
             </Form.Group>
 
-            <Button id="submit-btn" className="d-line-block mb-2" variant="success" type="submit" disabled={this.state.disabled} >
+            <Button className="d-line-block mb-2" variant="success" type="submit" disabled={this.state.disabled} >
               Send
             </Button>
 
