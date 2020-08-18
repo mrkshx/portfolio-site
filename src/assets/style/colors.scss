@@ -1,0 +1,54 @@
+$dark_green: #3A7D44;
+$light_green : #69B578;
+$background_dark: #26282C;
+$background_light: #5F646D;
+$white: #F0EDEE;
+$shadow: #131416;
+
+#navbar a {
+  color: $white;
+}
+
+#navbar a:hover {
+  color: $light_green;
+}
+
+.appbody {
+  background: linear-gradient(to bottom, $background_dark, $background_light);
+}
+
+.skill_icon {
+  color: $white;
+}
+
+h1 {
+  color: $dark_green;
+  text-shadow: 3px 3px $shadow;
+}
+
+
+h3 {
+  color: $light_green;
+  text-shadow: 2px 2px $shadow;
+}
+
+footer, p {
+  color: $white;
+}
+
+.contact_icon {
+  color: $white;
+}
+
+.footer-link {
+  color: $white;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  color: $light_green;
+}
+
+.form-label {
+  color: #F0EDEE;
+}

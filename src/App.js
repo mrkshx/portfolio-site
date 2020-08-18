@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './App.css';
+import './assets/style/colors.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -38,9 +39,11 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Container fluid={true}>
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
-            <Navbar.Brand>Markus Mengel</Navbar.Brand>
+        <Container className="appbody" fluid={true}>
+          <Navbar id="navbar" className="border-bottom" bg="transparent" expand="lg">
+            <Navbar.Brand>
+              <Link className="nav-link" to="/">Markus Mengel</Link>
+            </Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
