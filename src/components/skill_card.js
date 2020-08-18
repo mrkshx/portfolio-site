@@ -9,12 +9,12 @@ function SkillCard(props) {
       };
 
   const handleMouseLeave = (e) => {
-    e.target.style.color='black';
+    e.target.style.color='#F0EDEE';
       };
 
   return(
     <div>
-      <FontAwesomeIcon icon={[props.skill.symboltype, props.skill.symbol]} size="6x" onMouseOver={handleMouseEnter} onMouseLeave={handleMouseLeave}/>
+      <FontAwesomeIcon className="skill_icon" icon={[props.skill.symboltype, props.skill.symbol]} size="6x" onMouseOver={handleMouseEnter} onMouseLeave={handleMouseLeave}/>
     </div>
   );
 }

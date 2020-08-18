@@ -1,0 +1,57 @@
+#navbar a {
+  color: #F0EDEE;
+}
+
+#navbar a:hover {
+  color: #69B578;
+}
+
+
+#submit-btn {
+  background-color: #3A7D44;
+}
+
+#submit-btn:hover {
+  text-decoration: none;
+  background-color: #69B578;
+}
+
+.appbody {
+  background: linear-gradient(to bottom, #26282C, #5F646D);
+}
+
+.skill_icon {
+  color: #F0EDEE;
+}
+
+h1 {
+  color: #3A7D44;
+  text-shadow: 3px 3px #131416;
+}
+
+
+h3 {
+  color: #69B578;
+  text-shadow: 2px 2px #131416;
+}
+
+footer, p {
+  color: #F0EDEE;
+}
+
+.contact_icon {
+  color: #F0EDEE;
+}
+
+.footer-link {
+  color: #F0EDEE;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  color: #69B578;
+}
+
+.form-label {
+  color: #F0EDEE;
+}
