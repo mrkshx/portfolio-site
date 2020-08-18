@@ -1,57 +1,64 @@
+$dark_green: #3A7D44;
+$light_green : #69B578;
+$background_dark: #26282C;
+$background_light: #5F646D;
+$white: #F0EDEE;
+$shadow: #131416;
+
 #navbar a {
-  color: #F0EDEE;
+  color: $white;
 }
 
 #navbar a:hover {
-  color: #69B578;
+  color: $light_green;
 }
 
 
 #submit-btn {
-  background-color: #3A7D44;
+  background-color: $dark_green;
 }
 
 #submit-btn:hover {
   text-decoration: none;
-  background-color: #69B578;
+  background-color: $light_green;
 }
 
 .appbody {
-  background: linear-gradient(to bottom, #26282C, #5F646D);
+  background: linear-gradient(to bottom, $background_dark, $background_light);
 }
 
 .skill_icon {
-  color: #F0EDEE;
+  color: $white;
 }
 
 h1 {
-  color: #3A7D44;
-  text-shadow: 3px 3px #131416;
+  color: $dark_green;
+  text-shadow: 3px 3px $shadow;
 }
 
 
 h3 {
-  color: #69B578;
-  text-shadow: 2px 2px #131416;
+  color: $light_green;
+  text-shadow: 2px 2px $shadow;
 }
 
 footer, p {
-  color: #F0EDEE;
+  color: $white;
 }
 
 .contact_icon {
-  color: #F0EDEE;
+  color: $white;
 }
 
 .footer-link {
-  color: #F0EDEE;
+  color: $white;
 }
 
 .footer-link:hover {
   text-decoration: none;
-  color: #69B578;
+  color: $light_green;
 }
 
 .form-label {
-  color: #F0EDEE;
+  color: $white;
 }
