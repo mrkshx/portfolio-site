@@ -13,16 +13,6 @@ $shadow: #131416;
   color: $light_green;
 }
 
-
-#submit-btn {
-  background-color: $dark_green;
-}
-
-#submit-btn:hover {
-  text-decoration: none;
-  background-color: $light_green;
-}
-
 .appbody {
   background: linear-gradient(to bottom, $background_dark, $background_light);
 }
@@ -60,5 +50,5 @@ footer, p {
 }
 
 .form-label {
-  color: $white;
+  color: #F0EDEE;
 }
