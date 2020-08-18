@@ -4,7 +4,7 @@ import {Image} from 'cloudinary-react';
 
 import Hero from '../components/hero';
 
-import '../assets/style/aboutpage.css';
+import '../assets/style/aboutpage.scss';
 
 
 function AboutPage(props) {
