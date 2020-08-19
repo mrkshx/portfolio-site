@@ -14,7 +14,7 @@ function SkillCard(props) {
 
   return(
     <div>
-      <FontAwesomeIcon className="skill_icon" icon={[props.skill.symboltype, props.skill.symbol]} size="6x" onMouseOver={handleMouseEnter} onMouseLeave={handleMouseLeave}/>
+      <FontAwesomeIcon className="skill_icon" icon={[props.skill.symboltype, props.skill.symbol]} size="6x" onMouseOver={handleMouseEnter} onMouseOut={handleMouseLeave}/>
     </div>
   );
 }
