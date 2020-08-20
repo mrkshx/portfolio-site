@@ -5,19 +5,6 @@ $background_light: #5F646D;
 $white: #F0EDEE;
 $shadow: #131416;
 
-#navbar a {
-  color: $white;
-}
-
-#navbar a:hover {
-  color: $light_green;
-}
-
-#navbar-hamburger {
-  color: $white;
-  font-size: 25px;
-}
-
 .appbody {
   background: linear-gradient(to bottom, $background_dark, $background_light);
 }
