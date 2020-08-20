@@ -1,0 +1,14 @@
+@import 'colors.scss';
+
+#navbar a {
+  color: $white;
+}
+
+#navbar a:hover {
+  color: $light_green;
+}
+
+#navbar-hamburger {
+  color: $white;
+  font-size: 25px;
+}
