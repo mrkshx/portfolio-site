@@ -1,6 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import '../assets/style/skill_card.scss';
+
 
 function SkillCard(props) {
 
