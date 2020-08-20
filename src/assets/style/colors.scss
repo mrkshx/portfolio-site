@@ -27,16 +27,12 @@ h1 {
 }
 
 
-h3 {
+h3, h4 {
   color: $light_green;
   text-shadow: 2px 2px $shadow;
 }
 
 footer, p {
-  color: $white;
-}
-
-.contact_icon {
   color: $white;
 }
 
