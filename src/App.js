@@ -8,6 +8,7 @@ import './assets/style/colors.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import skills_array from './constants/skills';
 import HomePage from './pages/HomePage';
@@ -44,7 +45,11 @@ class App extends Component {
             <Navbar.Brand>
               <Link className="nav-link" to="/">Markus Mengel</Link>
             </Navbar.Brand>
-            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
+            <Navbar.Toggle aria-controls="basic-navbar-nav">
+              <span>
+                <FontAwesomeIcon id="navbar-hamburger" icon="bars"/>
+              </span>
+            </Navbar.Toggle>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>

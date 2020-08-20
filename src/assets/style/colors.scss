@@ -13,6 +13,11 @@ $shadow: #131416;
   color: $light_green;
 }
 
+#navbar-hamburger {
+  color: $white;
+  font-size: 25px;
+}
+
 .appbody {
   background: linear-gradient(to bottom, $background_dark, $background_light);
 }
