@@ -1,0 +1,9 @@
+@import 'colors.scss';
+
+.appbody {
+  background: linear-gradient(to bottom, $background_dark, $background_light);
+}
+
+p {
+  color: $white;
+}

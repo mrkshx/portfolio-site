@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import './assets/style/app.scss';
 import './assets/style/navbar.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
