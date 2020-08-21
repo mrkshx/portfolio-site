@@ -2,9 +2,8 @@
 
 .footer-link {
   color: $white;
+  &:hover {
+    color: $light_green;
+  }
 }
 
-.footer-link:hover {
-  text-decoration: none;
-  color: $light_green;
-}
