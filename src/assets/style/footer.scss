@@ -1,0 +1,10 @@
+@import 'colors.scss';
+
+.footer-link {
+  color: $white;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  color: $light_green;
+}
