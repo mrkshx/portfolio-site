@@ -41,7 +41,7 @@ class App extends Component {
     return (
       <Router>
         <Container className="appbody" fluid={true}>
-          <Navbar id="navbar" className="border-bottom sticky-top" bg="transparent" expand="lg">
+          <Navbar id="navbar" className="border-bottom sticky-top" expand="lg">
             <Navbar.Brand>
               <Link className="nav-link" to="/">Markus Mengel</Link>
             </Navbar.Brand>
