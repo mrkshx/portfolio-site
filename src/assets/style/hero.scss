@@ -1,12 +1,20 @@
+@import 'colors.scss';
+
 h1{
     font-size: 6rem !important;
+    color: $dark_green;
+    text-shadow: 3px 3px $shadow;
   }
+
+h3, h4 {
+  color: $light_green;
+  text-shadow: 2px 2px $shadow;
+}
 
 h3{
     font-size: 3.5rem !important;
   }
-
-  h4{
+h4{
     font-size: 1.25rem !important;
   }
 
@@ -23,3 +31,5 @@ h3{
     font-size: 1rem !important;
   }
 }
+
+

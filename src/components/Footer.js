@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import '../assets/style/footer.css';
+import '../assets/style/footer.scss';
 
 
 function Footer() {
@@ -31,7 +31,9 @@ function Footer() {
         </Row>
         <Row>
           <Col className="text-right" >
-            This page was made by Markus Mengel // 2020
+            <p>
+              This page was made by Markus Mengel // 2020
+            </p>
           </Col>
         </Row>
       </Container>

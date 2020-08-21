@@ -4,39 +4,3 @@ $background_dark: #26282C;
 $background_light: #5F646D;
 $white: #F0EDEE;
 $shadow: #131416;
-
-.appbody {
-  background: linear-gradient(to bottom, $background_dark, $background_light);
-}
-
-.skill_icon {
-  color: $white;
-}
-
-h1 {
-  color: $dark_green;
-  text-shadow: 3px 3px $shadow;
-}
-
-
-h3, h4 {
-  color: $light_green;
-  text-shadow: 2px 2px $shadow;
-}
-
-footer, p {
-  color: $white;
-}
-
-.footer-link {
-  color: $white;
-}
-
-.footer-link:hover {
-  text-decoration: none;
-  color: $light_green;
-}
-
-.form-label {
-  color: #F0EDEE;
-}

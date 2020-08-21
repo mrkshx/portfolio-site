@@ -2,14 +2,12 @@
 
 #navbar {
   background-color: #26282C;
-}
-
-#navbar a {
-  color: $white;
-}
-
-#navbar a:hover {
-  color: $light_green;
+  a {
+    color: $white;
+    &:hover {
+      color: $light_green;
+    }
+  }
 }
 
 #navbar-hamburger {
