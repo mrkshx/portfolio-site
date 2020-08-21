@@ -32,38 +32,38 @@ class ContactPage extends Component {
 
   handleSubmit = (e) => {
     const form = e.currentTarget;
+    e.preventDefault();
     if (form.checkValidity() === false) {
-      e.preventDefault();
       e.stopPropagation();
     }
 
     this.setState({
       validated: true,
-      disabled: true
     })
 
-    Axios.post('https://us-central1-personalsite-291de.cloudfunctions.net/webApi/api/email', this.state)
-      .then(res => {
+    if (form.checkValidity() === true) {
+      Axios.post('https://us-central1-personalsite-291de.cloudfunctions.net/webApi/api/email', this.state)
+        .then(res => {
           if(res.data.success) {
-              this.setState({
-                  disabled: false,
-                  emailSent: true
-              });
+            this.setState({
+              disabled: false,
+              emailSent: true
+            });
           } else {
-              this.setState({
-                  disabled: false,
-                  emailSent: false
-              });
-          }
-      })
-      .catch(err => {
-          console.log(err);
-
-          this.setState({
+            this.setState({
               disabled: false,
               emailSent: false
+            });
+          }
+        })
+        .catch(err => {
+          console.log(err);
+          this.setState({
+            disabled: false,
+            emailSent: false
           });
-      })
+        })
+    }
   }
 
   render() {
@@ -74,21 +74,21 @@ class ContactPage extends Component {
           <Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit} >
             <Form.Group>
               <Form.Label htmlFor="full-name" >Full Name</Form.Label>
-              <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} required="true"/>
+              <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} required/>
               <Form.Control.Feedback type="invalid">
                 Please provide a valid name.
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Group>
               <Form.Label htmlFor="email" >E-mail</Form.Label>
-              <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} required="true"/>
+              <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} required/>
               <Form.Control.Feedback type="invalid">
                 Please provide a valid mail address.
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Group>
               <Form.Label htmlFor="message" >Message</Form.Label>
-              <Form.Control id="message" name="message" as="textarea" rows={5} value={this.state.message} onChange={this.handleChange} required="true"/>
+              <Form.Control id="message" name="message" as="textarea" rows={5} value={this.state.message} onChange={this.handleChange} required/>
               <Form.Control.Feedback type="invalid">
                 Please provide a valid message.
               </Form.Control.Feedback>
