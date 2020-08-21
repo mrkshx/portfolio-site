@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Container className="appbody" fluid={true}>
+        <Container className="p-0 appbody" fluid={true}>
           <Navbar id="navbar" className="border-bottom sticky-top" expand="lg">
             <Navbar.Brand>
               <Link className="nav-link" to="/">Markus Mengel</Link>
