@@ -15,7 +15,8 @@ class ContactPage extends Component {
       email: '',
       message: '',
       disabled: false,
-      emailSent: null
+      emailSent: null,
+      validated: false,
     }
   }
 
@@ -30,9 +31,14 @@ class ContactPage extends Component {
   }
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
 
     this.setState({
+      validated: true,
       disabled: true
     })
 
@@ -65,18 +71,27 @@ class ContactPage extends Component {
       <div>
         <Hero title={this.props.title} ></Hero>
         <Container fluid={false}>
-          <Form onSubmit={this.handleSubmit} >
+          <Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit} >
             <Form.Group>
               <Form.Label htmlFor="full-name" >Full Name</Form.Label>
-              <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
+              <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} required="true"/>
+              <Form.Control.Feedback type="invalid">
+                Please provide a valid name.
+              </Form.Control.Feedback>
             </Form.Group>
             <Form.Group>
               <Form.Label htmlFor="email" >E-mail</Form.Label>
-              <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
+              <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} required="true"/>
+              <Form.Control.Feedback type="invalid">
+                Please provide a valid mail address.
+              </Form.Control.Feedback>
             </Form.Group>
             <Form.Group>
               <Form.Label htmlFor="message" >Message</Form.Label>
-              <Form.Control id="message" name="message" as="textarea" rows={5} value={this.state.message} onChange={this.handleChange} />
+              <Form.Control id="message" name="message" as="textarea" rows={5} value={this.state.message} onChange={this.handleChange} required="true"/>
+              <Form.Control.Feedback type="invalid">
+                Please provide a valid message.
+              </Form.Control.Feedback>
             </Form.Group>
 
             <Button className="d-line-block mb-2" variant="success" type="submit" disabled={this.state.disabled} >
