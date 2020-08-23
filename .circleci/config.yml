@@ -33,9 +33,6 @@ jobs:
           name: Installing Firebase-Tools
           command: yarn add firebase-tools
       - run:
-          name: Set Functions Environment Variables
-          command: cd ./functions && echo "SEND_API_KEY=$SENDGRID_API_KEY" >> .env && echo "SEND_EMAIL=$SEND_EMAIL" >> .env
-      - run:
           name: Firebase Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
 workflows:
