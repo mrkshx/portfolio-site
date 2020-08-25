@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 import Hero from '../components/hero';
 import SkillCard from '../components/skill_card';
@@ -29,6 +30,8 @@ function HomePage(props) {
             <h3>Full-Stack and Mobile Developer</h3>
           </Card.Text>
           <Card.Text> <h4>{props.note}</h4>  </Card.Text>
+          <Button className="landing-btn" variant="info" href="#">My Projects</Button>
+          <Button className="landing-btn" variant="success" href="/contact">Contact Me</Button>
           <Card.Img id="landing-avatar"  src={avatar} alt="Landingpage Avatar" />
         </Card.ImgOverlay>
       </Card>
