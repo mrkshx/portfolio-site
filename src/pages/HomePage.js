@@ -5,7 +5,9 @@ import Card from 'react-bootstrap/Card';
 
 import Hero from '../components/hero';
 import SkillCard from '../components/skill_card';
-import free_image from '../assets/images/12836.jpg';
+import landing_image from '../assets/images/12836.jpg';
+import avatar from '../assets/images/landing_avatar.jpg';
+
 
 function HomePage(props) {
 
@@ -18,14 +20,16 @@ function HomePage(props) {
 
   return(
     <div>
-      <Card className="bg-dark text-white">
-        <Card.Img id="landing-img"  src={free_image} alt="Landingpage Image" />
-        <Card.ImgOverlay>
-          <Card.Title>{props.title}</Card.Title>
+      <Card id="landing-card" className="bg-dark">
+        <Card.Img id="landing-img"  src={landing_image} alt="Landingpage Image" />
+        <Card.ImgOverlay id="landing-card-overlay" >
+          <Card.Text> <p>Hello, I'm</p>  </Card.Text>
+          <Card.Header as="h1" >Markus Mengel</Card.Header>
           <Card.Text>
-            {props.subtitle}
+            <h3>Full-Stack and Mobile Developer</h3>
           </Card.Text>
-          <Card.Text>{props.note}</Card.Text>
+          <Card.Text> <h4>{props.note}</h4>  </Card.Text>
+          <Card.Img id="landing-avatar"  src={avatar} alt="Landingpage Avatar" />
         </Card.ImgOverlay>
       </Card>
       {/*

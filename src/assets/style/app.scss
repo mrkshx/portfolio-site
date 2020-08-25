@@ -1,4 +1,5 @@
 @import 'colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,400;1,500;1,700&display=swap');
 
 .appbody {
   background: linear-gradient(to bottom, $background_dark, $background_light);
@@ -8,9 +9,52 @@ p {
   color: $white;
 }
 
+#landing-card {
+  font-family: 'Exo', sans-serif;
+  vertical-align: middle;
+  p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  h1{
+    padding: 0;
+    font-size: 5rem !important;
+    color: $dark_green;
+    text-shadow: 3px 3px $shadow;
+  }
+  h3, h4 {
+    color: $light_green;
+    text-shadow: 2px 2px $shadow;
+  }
+  h3 {
+    font-size: 3rem !important;
+  }
+  h4 {
+    font-size: 1.25rem !important;
+  }
+}
+
+#landing-card-overlay {
+  padding: 10% 8%;
+}
+
 #landing-img {
   object-fit: cover;
   height: 78vh;
-  opacity: 0.7;
+  opacity: 0.5;
   filter: grayscale(50%);
+}
+
+#landing-avatar {
+  position: absolute;
+  object-fit: cover;
+  bottom: 50px;
+  right: 50px;
+  height: 400px;
+  width: auto;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0px 0px 30px 30px #000000;
+
 }
