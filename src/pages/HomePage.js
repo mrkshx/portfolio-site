@@ -9,6 +9,8 @@ import SkillCard from '../components/skill_card';
 import landing_image from '../assets/images/12836.jpg';
 import avatar from '../assets/images/landing_avatar.jpg';
 
+import '../assets/style/homepage.scss';
+
 
 function HomePage(props) {
 
