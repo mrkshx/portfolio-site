@@ -13,6 +13,7 @@ p {
   font-family: 'Exo', sans-serif;
   vertical-align: middle;
   p {
+    color: $white;
     margin: 0;
     font-size: 18px;
     font-weight: bold;
@@ -23,15 +24,12 @@ p {
     color: $white;
     text-shadow: 3px 3px $shadow;
   }
-  h3, h4 {
-    color: $light_green;
-    text-shadow: 2px 2px $shadow;
-  }
   h3 {
     font-size: 3rem !important;
-  }
-  h4 {
-    font-size: 1.25rem !important;
+    font-weight: bold;
+    padding: 0;
+    color: $light_green;
+    text-shadow: 2px 2px $shadow;
   }
 }
 
