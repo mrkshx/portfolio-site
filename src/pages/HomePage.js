@@ -27,9 +27,9 @@ function HomePage(props) {
         <Card.Img id="landing-img"  src={landing_image} alt="Landingpage Image" />
         <Card.ImgOverlay id="landing-card-overlay" >
           <Card.Text> Hello, I'm </Card.Text>
-          <Card.Header as="h1" >Markus Mengel</Card.Header>
-          <Card.Header as="h3" >Full-Stack and Mobile Developer</Card.Header>
-          <Card.Text> Exited to learn more skills and build cool projects </Card.Text>
+          <Card.Header as="h1">{props.name}</Card.Header>
+          <Card.Header as="h3">{props.title}</Card.Header>
+          <Card.Text>{props.subtitle}</Card.Text>
           <Button className="landing-btn" variant="info" href="#">My Projects</Button>
           <Button className="landing-btn" variant="success" href="/contact">Contact Me</Button>
           <Card.Img id="landing-avatar"  src={avatar} alt="Landingpage Avatar" />

@@ -23,9 +23,9 @@ class App extends Component {
     super(props);
     this.state = {
       home: {
-        title: 'Welcome',
-        subtitle: 'This is my personal website!',
-        note: 'See my projects and feel free to contact me',
+        name: 'Markus Mengel',
+        title: 'Full-Stack and Mobile Developer',
+        subtitle: 'Exited to learn more skills and build cool projects',
         skills: skills_array
       },
       about: {
@@ -58,7 +58,7 @@ class App extends Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle} note={this.state.home.note} skills={this.state.home.skills} />} />
+          <Route path='/' exact render={() => <HomePage name={this.state.home.name} title={this.state.home.title} subtitle={this.state.home.subtitle} skills={this.state.home.skills} />} />
           <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title} />} />
           <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} />} />
           <Footer/>
