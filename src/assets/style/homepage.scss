@@ -48,7 +48,7 @@
   width: auto;
   border-radius: 50%;
   border: none;
-  box-shadow: 0px 0px 30px 30px #000000;
+  box-shadow: 0 0 30px 30px #000000;
 }
 
 .landing-btn {
@@ -64,10 +64,10 @@
 
   #landing-avatar {
     height: 300px;
-    box-shadow: 0px 0px 20px 20px #000000;
+    box-shadow: 0 0 20px 20px #000000;
   }
   #landing-card-overlay {
-    padding: 25px 25px;
+    padding: 25px;
   }
 }
 
@@ -94,12 +94,12 @@
   }
   #landing-avatar {
     height: 27vw;
-    box-shadow: 0px 0px 7px 7px #000000;
+    box-shadow: 0 0 7px 7px #000000;
     bottom: 15px;
     right: 15px;
   }
   .landing-btn {
-    margin: 15px 15px 0px 0px;
+    margin: 15px 15px 0 0;
     font-size: 0.75rem !important;
     padding: 0.25rem 0.75rem !important;
   }
@@ -122,12 +122,12 @@
   }
   #landing-avatar {
     height: 25vw;
-    box-shadow: 0px 0px 5px 5px #000000;
+    box-shadow: 0 0 5px 5px #000000;
     bottom: 10px;
     right: 10px;
   }
   .landing-btn {
-    margin: 15px 10px 0px 10px;
+    margin: 15px 10px 0;
   }
 }
 
@@ -145,12 +145,12 @@
     }
   }
   .landing-btn {
-    margin: 15px 10px 0px 5px;
+    margin: 15px 10px 0 5px;
     font-size: 0.6rem !important;
   }
   #landing-avatar {
     height: 22vw;
-    box-shadow: 0px 0px 3px 3px #000000;
+    box-shadow: 0 0 3px 3px #000000;
   }
 }
 
@@ -160,7 +160,7 @@
     height: 25vw;
     bottom: 25px;
     right: 25px;
-    box-shadow: 0px 0px 20px 20px #000000;
+    box-shadow: 0 0 20px 20px #000000;
   }
   .landing-btn {
     margin: 30px;
@@ -171,7 +171,7 @@
   #landing-avatar {
     bottom: 15px;
     right: 15px;
-    box-shadow: 0px 0px 15px 15px #000000;
+    box-shadow: 0 0 15px 15px #000000;
   }
   #landing-card {
     h1 {
