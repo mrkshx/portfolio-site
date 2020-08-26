@@ -3,20 +3,12 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {Image} from 'cloudinary-react';
 
-import SkillCard from '../components/skill_card';
 import landing_image from '../assets/images/12836.jpg';
 
 import '../assets/style/homepage.scss';
 
 
 function HomePage(props) {
-
-  const showSkills = () => {
-    return props.skills.map(skill => {
-        return <SkillCard skill={skill} key={skill.symbol}/>
-      });
-
-  }
 
   return(
     <div>

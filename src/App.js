@@ -26,10 +26,10 @@ class App extends Component {
         name: 'Markus Mengel',
         title: 'Full-Stack and Mobile Developer',
         subtitle: 'Exited to learn more skills and build cool projects',
-        skills: skills_array
       },
       about: {
-        title: 'About Me'
+        title: 'About Me',
+        skills: skills_array
       },
       contact: {
         title: 'Contact Me'
@@ -60,7 +60,7 @@ class App extends Component {
           </Navbar>
           <Route path='/' exact render={() => <HomePage name={this.state.home.name} title={this.state.home.title} subtitle={this.state.home.subtitle} skills={this.state.home.skills} />} />
           <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title} />} />
-          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} />} />
+          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} skills={this.state.about.skills}/>} />
           <Footer/>
         </Container>
       </Router>
