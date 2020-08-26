@@ -55,7 +55,7 @@
 }
 
 
-@media only screen and (max-width: 770px) {
+@media screen and (max-width: 920px) {
 
   #landing-avatar {
     height: 250px;
@@ -63,14 +63,14 @@
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media screen and (max-width: 460px) {
 
   #landing-card {
     h1 {
-      font-size: 3.2rem !important;
+      font-size: 2.7rem !important;
     }
     h3 {
-      font-size: 2.5rem !important;
+      font-size: 2.2rem !important;
     }
     p {
       font-size: 13px;
@@ -79,12 +79,61 @@
   #landing-avatar {
     height: 150px;
     box-shadow: 0px 0px 7px 7px #000000;
-    bottom: 0;
-    top: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
   }
   .landing-btn {
     margin: 30px 15px 0px 15px;
+    font-size: 1rem !important;
+    padding: 0.25rem 0.75rem !important;
   }
 }
+
+@media screen and (max-width: 360px) {
+
+  #landing-card {
+    h1 {
+      font-size: 2.4rem !important;
+      text-shadow: 2px 2px $shadow;
+    }
+    h3 {
+      font-size: 1.5rem !important;
+      text-shadow: 1px 1px $shadow;
+    }
+    p {
+      font-size: 11px;
+    }
+  }
+  #landing-avatar {
+    bottom: 20px;
+    right: 20px;
+  }
+  .landing-btn {
+    margin: 15px 10px 0px 10px;
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  #landing-card {
+    h1 {
+      font-size: 2rem !important;
+    }
+    h3 {
+      font-size: 1.2rem !important;
+    }
+    p {
+      font-size: 10px;
+    }
+  }
+  #landing-avatar {
+    height: 150px;
+  }
+  .landing-btn {
+    margin: 15px 10px 0px 10px;
+    font-size: 0.75rem !important;
+  }
+}
+
 
