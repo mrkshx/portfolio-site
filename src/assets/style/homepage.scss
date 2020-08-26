@@ -10,13 +10,15 @@
     font-weight: bold;
     text-shadow: 1px 1px $shadow;
   }
-  h1{
+  h1 {
+    border-bottom: 0;
     padding: 0;
     font-size: 5rem !important;
     color: $white;
     text-shadow: 3px 3px $shadow;
   }
   h3 {
+    border-bottom: 0;
     font-size: 3rem !important;
     font-weight: bold;
     padding: 0;
