@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import {Image} from 'cloudinary-react';
 
 import SkillCard from '../components/skill_card';
 import landing_image from '../assets/images/12836.jpg';
-import avatar from '../assets/images/landing_avatar.jpg';
 
 import '../assets/style/homepage.scss';
 
@@ -29,7 +29,7 @@ function HomePage(props) {
           <Card.Text>{props.subtitle}</Card.Text>
           <Button className="landing-btn" variant="info" size="lg" href="#">My Projects</Button>
           <Button className="landing-btn" variant="success" size="lg" href="/contact">Contact Me</Button>
-          <Card.Img id="landing-avatar"  src={avatar} alt="Landingpage Avatar" />
+          <Image  id="landing-avatar" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId="landing_avatar_oerydq" width="350" height="350" radius="max" />
         </Card.ImgOverlay>
       </Card>
     </div>
