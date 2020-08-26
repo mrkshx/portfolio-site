@@ -50,3 +50,38 @@
 .landing-btn {
   margin: 50px;
 }
+
+
+@media only screen and (max-width: 770px) {
+
+  #landing-avatar {
+    height: 250px;
+    box-shadow: 0px 0px 20px 20px #000000;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+
+  #landing-card {
+    h1 {
+      font-size: 3.2rem !important;
+    }
+    h3 {
+      font-size: 2.5rem !important;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+  #landing-avatar {
+    height: 150px;
+    box-shadow: 0px 0px 7px 7px #000000;
+    bottom: 0;
+    top: 20px;
+    right: 20px;
+  }
+  .landing-btn {
+    margin: 30px 15px 0px 15px;
+  }
+}
+
