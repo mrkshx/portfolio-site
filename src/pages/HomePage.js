@@ -1,27 +1,29 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import {Image} from 'cloudinary-react';
 
-import Hero from '../components/hero';
-import SkillCard from '../components/skill_card';
+import landing_image from '../assets/images/12836.jpg';
+
+import '../assets/style/homepage.scss';
+
 
 function HomePage(props) {
 
-  const showSkills = () => {
-    return props.skills.map(skill => {
-        return <SkillCard skill={skill} key={skill.symbol}/>
-      });
-
-  }
-
   return(
     <div>
-      <Hero title={props.title} subtitle={props.subtitle} note={props.note}></Hero>
-      <Container fluid={true} >
-        <Row className='justify-content-around'>
-          {showSkills()}
-        </Row>
-      </Container>
+      <Card id="landing-card" className="bg-dark">
+        <Card.Img id="landing-img"  src={landing_image} alt="Landingpage Image" />
+        <Card.ImgOverlay id="landing-card-overlay" >
+          <Card.Text> Hello, I'm </Card.Text>
+          <Card.Header as="h1">{props.name}</Card.Header>
+          <Card.Header as="h3">{props.title}</Card.Header>
+          <Card.Text>{props.subtitle}</Card.Text>
+          <Button className="landing-btn" variant="info" size="lg" href="#">My Projects</Button>
+          <Button className="landing-btn" variant="success" size="lg" href="/contact">Contact Me</Button>
+          <Image  id="landing-avatar" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId="landing_avatar_oerydq" width="350" height="350" radius="max" />
+        </Card.ImgOverlay>
+      </Card>
     </div>
   );
 }

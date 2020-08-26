@@ -10,7 +10,7 @@ import '../assets/style/footer.scss';
 function Footer() {
 
   return(
-    <footer className="mt-5">
+    <footer>
       <Container fluid={true} >
         <Row className="border-top p-4 justify-content-between" >
           <Col>
