@@ -149,3 +149,32 @@
     box-shadow: 0px 0px 3px 3px #000000;
   }
 }
+
+
+@media only screen and (orientation: landscape) and (max-width: 720px) {
+  #landing-avatar {
+    height: 25vw;
+    bottom: 25px;
+    right: 25px;
+    box-shadow: 0px 0px 20px 20px #000000;
+  }
+  .landing-btn {
+    margin: 30px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 640px) {
+  #landing-avatar {
+    bottom: 15px;
+    right: 15px;
+    box-shadow: 0px 0px 15px 15px #000000;
+  }
+  #landing-card {
+    h1 {
+        font-size: 3.8rem !important;
+      }
+    h3 {
+      font-size: 2.5rem !important;
+    }
+  }
+}
