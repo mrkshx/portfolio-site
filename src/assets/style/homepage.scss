@@ -1,6 +1,12 @@
 @import 'colors.scss';
 
+#homepage {
+  flex: 1;
+  overflow: auto;
+}
+
 #landing-card {
+  height: 100%;
   font-family: 'Exo', sans-serif;
   p {
     color: $white;
@@ -34,7 +40,7 @@
 
 #landing-img {
   object-fit: fill;
-  height: 79vh;
+  height: 100%;
   opacity: 0.5;
   filter: grayscale(50%);
 }
@@ -57,10 +63,6 @@
 
 
 @media screen and (max-width: 1024px) {
-  #landing-img {
-    height: auto;
-  }
-
 
   #landing-avatar {
     height: 300px;

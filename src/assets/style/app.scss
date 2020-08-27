@@ -3,8 +3,15 @@
 
 .appbody {
   background: linear-gradient(to bottom, $background_dark, $background_light);
+  display: flex;
+  flex-flow: column;
 }
 
 p {
   color: $white;
+}
+
+
+html, body, #root, .appbody {
+  height: 100%;
 }

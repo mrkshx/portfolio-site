@@ -11,7 +11,7 @@ import '../assets/style/homepage.scss';
 function HomePage(props) {
 
   return(
-    <div>
+    <div id="homepage" >
       <Card id="landing-card" className="bg-dark">
         <Card.Img id="landing-img"  src={landing_image} alt="Landingpage Image" />
         <Card.ImgOverlay id="landing-card-overlay" >
