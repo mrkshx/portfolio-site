@@ -40,29 +40,31 @@ class App extends Component {
   render() {
     return (
       <Router>
+      <div className="app" >
+        <Navbar id="navbar" className="border-bottom sticky-top" expand="lg">
+          <Navbar.Brand>
+            <Link className="nav-link" to="/">Markus Mengel</Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <span>
+              <FontAwesomeIcon id="navbar-hamburger" icon="bars"/>
+            </span>
+          </Navbar.Toggle>
+          <Navbar.Collapse id="navbar-toggle">
+            <Nav className="ml-auto">
+              <Link className="nav-link" to="/">Home</Link>
+              <Link className="nav-link" to="/about">About</Link>
+              <Link className="nav-link" to="/contact">Contact</Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
         <Container className="p-0 appbody" fluid={true}>
-          <Navbar id="navbar" className="border-bottom sticky-top" expand="lg">
-            <Navbar.Brand>
-              <Link className="nav-link" to="/">Markus Mengel</Link>
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav">
-              <span>
-                <FontAwesomeIcon id="navbar-hamburger" icon="bars"/>
-              </span>
-            </Navbar.Toggle>
-            <Navbar.Collapse id="navbar-toggle">
-              <Nav className="ml-auto">
-                <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/about">About</Link>
-                <Link className="nav-link" to="/contact">Contact</Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
           <Route path='/' exact render={() => <HomePage name={this.state.home.name} title={this.state.home.title} subtitle={this.state.home.subtitle} skills={this.state.home.skills} />} />
           <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title} />} />
           <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} skills={this.state.about.skills}/>} />
           <Footer/>
         </Container>
+      </div>
       </Router>
     );
   }

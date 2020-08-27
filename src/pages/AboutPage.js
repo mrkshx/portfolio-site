@@ -18,7 +18,7 @@ function AboutPage(props) {
   }
 
   return(
-      <div>
+      <div id="aboutpage" >
           <Hero title={props.title} />
           <Container>
             <Image className="avatar mb-5" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId="avatar_i7fl5h" width="250" height="250" crop="thumb" gravtity="face-center" radius="max" />

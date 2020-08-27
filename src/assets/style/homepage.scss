@@ -1,6 +1,17 @@
 @import 'colors.scss';
 
+
+#homepage {
+  flex: 1;
+  overflow: auto;
+}
+
+#landing-card-subtitle {
+  margin-top: 5px !important;
+}
+
 #landing-card {
+  height: 100%;
   font-family: 'Exo', sans-serif;
   p {
     color: $white;
@@ -34,7 +45,7 @@
 
 #landing-img {
   object-fit: fill;
-  height: 79vh;
+  height: 100%;
   opacity: 0.5;
   filter: grayscale(50%);
 }
@@ -56,30 +67,52 @@
 }
 
 
-@media screen and (max-width: 1024px) {
-  #landing-img {
-    height: auto;
+@media screen and (orientation: portrait) and (min-width: 1080px) and (min-height: 2100px) {
+
+  #landing-card-subtitle {
+    margin-top: 8px !important;
   }
 
+  #landing-card {
+    p {
+      font-size: 24px;
+    }
+    h1 {
+      font-size: 6rem !important;
+    }
+    h3 {
+      font-size: 3.5rem !important;
+    }
+  }
 
   #landing-avatar {
-    height: 300px;
+    height: 60vw;
     box-shadow: 0 0 20px 20px #000000;
   }
+
+  #landing-card-overlay {
+    padding: 180px 115px;
+  }
+
+  .landing-btn {
+    font-size: 1.7rem !important;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 820px) {
+
+  #landing-avatar {
+    height: 45vw;
+    bottom: 30px;
+    right: 30px;
+  }
+
   #landing-card-overlay {
     padding: 25px;
   }
 }
 
-@media screen and (max-width: 820px) {
-
-  #landing-avatar {
-    height: 200px;
-
-  }
-}
-
-@media screen and (max-width: 460px) {
+@media screen and (orientation: portrait) and (max-width: 460px) {
 
   #landing-card {
     h1 {
@@ -92,12 +125,14 @@
       font-size: 10px;
     }
   }
+
   #landing-avatar {
-    height: 27vw;
+    height: 50vw;
     box-shadow: 0 0 7px 7px #000000;
-    bottom: 15px;
-    right: 15px;
+    bottom: 20px;
+    right: 20px;
   }
+
   .landing-btn {
     margin: 15px 15px 0 0;
     font-size: 0.75rem !important;
@@ -105,7 +140,7 @@
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (orientation: portrait) and (max-width: 360px) {
 
   #landing-card {
     h1 {
@@ -120,18 +155,20 @@
       font-size: 11px;
     }
   }
+
   #landing-avatar {
-    height: 25vw;
+    height: 42vw;
     box-shadow: 0 0 5px 5px #000000;
     bottom: 10px;
     right: 10px;
   }
+
   .landing-btn {
     margin: 15px 10px 0;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (orientation: portrait) and (max-width: 320px) {
 
   #landing-card {
     h1 {
@@ -144,35 +181,59 @@
       font-size: 10px;
     }
   }
+
   .landing-btn {
     margin: 15px 10px 0 5px;
     font-size: 0.6rem !important;
   }
-  #landing-avatar {
-    height: 22vw;
-    box-shadow: 0 0 3px 3px #000000;
-  }
 }
 
 
-@media only screen and (orientation: landscape) and (max-width: 720px) {
+@media only screen and (orientation: landscape) and (max-width: 1024px) {
+
+
+  #landing-card-overlay {
+    padding: 25px;
+  }
+
   #landing-avatar {
     height: 25vw;
     bottom: 25px;
     right: 25px;
     box-shadow: 0 0 20px 20px #000000;
   }
+
   .landing-btn {
     margin: 30px;
   }
 }
 
+@media only screen and (orientation: landscape) and (max-width: 840px) {
+
+  html {
+    height: unset;
+  }
+
+  #landing-avatar {
+    height: 25vw;
+    bottom: 25px;
+    right: 25px;
+  }
+
+  .landing-btn {
+    margin: 20px;
+    font-size: 1rem !important;
+  }
+}
+
 @media only screen and (orientation: landscape) and (max-width: 640px) {
+
   #landing-avatar {
     bottom: 15px;
     right: 15px;
-    box-shadow: 0 0 15px 15px #000000;
+    box-shadow: 0 0 10px 10px #000000;
   }
+
   #landing-card {
     h1 {
         font-size: 3.8rem !important;
