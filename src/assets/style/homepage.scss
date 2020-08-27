@@ -5,6 +5,10 @@
   overflow: auto;
 }
 
+#landing-card-subtitle {
+  margin-top: 5px !important;
+}
+
 #landing-card {
   height: 100%;
   font-family: 'Exo', sans-serif;
@@ -62,22 +66,48 @@
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1080px) and (min-height: 2100px) {
+
+  #landing-card-subtitle {
+    margin-top: 8px !important;
+  }
+
+  #landing-card {
+    p {
+      font-size: 24px;
+    }
+    h1 {
+      font-size: 6rem !important;
+    }
+    h3 {
+      font-size: 3.5rem !important;
+    }
+  }
 
   #landing-avatar {
-    height: 300px;
+    height: 60vw;
     box-shadow: 0 0 20px 20px #000000;
   }
+
   #landing-card-overlay {
-    padding: 25px;
+    padding: 180px 115px;
+  }
+
+  .landing-btn {
+    font-size: 1.7rem !important;
   }
 }
 
 @media screen and (max-width: 820px) {
 
   #landing-avatar {
-    height: 200px;
+    height: 45vw;
+    bottom: 30px;
+    right: 30px;
+  }
 
+  #landing-card-overlay {
+    padding: 25px;
   }
 }
 
@@ -94,12 +124,14 @@
       font-size: 10px;
     }
   }
+
   #landing-avatar {
-    height: 27vw;
+    height: 50vw;
     box-shadow: 0 0 7px 7px #000000;
-    bottom: 15px;
-    right: 15px;
+    bottom: 20px;
+    right: 20px;
   }
+
   .landing-btn {
     margin: 15px 15px 0 0;
     font-size: 0.75rem !important;
@@ -122,12 +154,14 @@
       font-size: 11px;
     }
   }
+
   #landing-avatar {
-    height: 25vw;
+    height: 42vw;
     box-shadow: 0 0 5px 5px #000000;
     bottom: 10px;
     right: 10px;
   }
+
   .landing-btn {
     margin: 15px 10px 0;
   }
@@ -146,35 +180,36 @@
       font-size: 10px;
     }
   }
+
   .landing-btn {
     margin: 15px 10px 0 5px;
     font-size: 0.6rem !important;
-  }
-  #landing-avatar {
-    height: 22vw;
-    box-shadow: 0 0 3px 3px #000000;
   }
 }
 
 
 @media only screen and (orientation: landscape) and (max-width: 720px) {
+
   #landing-avatar {
     height: 25vw;
     bottom: 25px;
     right: 25px;
     box-shadow: 0 0 20px 20px #000000;
   }
+
   .landing-btn {
     margin: 30px;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 640px) {
+
   #landing-avatar {
     bottom: 15px;
     right: 15px;
     box-shadow: 0 0 15px 15px #000000;
   }
+
   #landing-card {
     h1 {
         font-size: 3.8rem !important;
