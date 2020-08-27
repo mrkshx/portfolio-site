@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,400;1,500;1,700&display=swap');
 
 .appbody {
-  background: linear-gradient(to bottom, $background_dark, $background_light);
   display: flex;
   flex-flow: column;
+}
+
+body {
+  background: linear-gradient(to bottom, $background_dark, $background_light) fixed;
 }
 
 p {
@@ -14,4 +17,21 @@ p {
 
 html, body, #root, .appbody {
   height: 100%;
+}
+
+.app {
+  height: 92%;
+}
+
+
+@media screen and (orientation: portrait) and (max-width: 820px) {
+  .app {
+    height: 90%;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 460px) {
+  .app {
+    height: 87%;
+  }
 }

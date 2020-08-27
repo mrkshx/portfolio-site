@@ -1,6 +1,12 @@
+@import 'colors.scss';
+
 .avatar {
   border: solid 3px black;
   border-radius: 50%;
   background-color: #F0EDEE;
 }
 
+#aboutpage {
+  flex: 1;
+  overflow: auto;
+}

@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Axios from 'axios';
 
+import '../assets/style/contactpage.scss';
 import '../assets/style/contact_form.scss';
 
 class ContactPage extends Component {
@@ -68,7 +69,7 @@ class ContactPage extends Component {
 
   render() {
     return (
-      <div>
+      <div id="contactpage" >
         <Hero title={this.props.title} ></Hero>
         <Container fluid={false}>
           <Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit} >
