@@ -35,6 +35,9 @@ class App extends Component {
       contact: {
         title: 'Contact Me'
       },
+      projects: {
+        title: 'My Projects'
+      },
     }
   }
 
@@ -64,7 +67,7 @@ class App extends Component {
           <Route path='/' exact render={() => <HomePage name={this.state.home.name} title={this.state.home.title} subtitle={this.state.home.subtitle} skills={this.state.home.skills} />} />
           <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title} />} />
           <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} skills={this.state.about.skills}/>} />
-          <Route path='/projects' exact render={() => <ProjectPage/>} />
+          <Route path='/projects' exact render={() => <ProjectPage title={this.state.projects.title}/>} />
           <Footer/>
         </Container>
       </div>
