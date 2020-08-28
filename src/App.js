@@ -14,6 +14,7 @@ import skills_array from './constants/skills';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
+import ProjectPage from './pages/ProjectPage';
 import Footer from './components/Footer';
 
 library.add(fab, fas);
@@ -33,6 +34,9 @@ class App extends Component {
       },
       contact: {
         title: 'Contact Me'
+      },
+      projects: {
+        title: 'My Projects'
       },
     }
   }
@@ -55,6 +59,7 @@ class App extends Component {
               <Link className="nav-link" to="/">Home</Link>
               <Link className="nav-link" to="/about">About</Link>
               <Link className="nav-link" to="/contact">Contact</Link>
+              <Link className="nav-link" to="/projects">Projects</Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -62,6 +67,7 @@ class App extends Component {
           <Route path='/' exact render={() => <HomePage name={this.state.home.name} title={this.state.home.title} subtitle={this.state.home.subtitle} skills={this.state.home.skills} />} />
           <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title} />} />
           <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} skills={this.state.about.skills}/>} />
+          <Route path='/projects' exact render={() => <ProjectPage title={this.state.projects.title}/>} />
           <Footer/>
         </Container>
       </div>
