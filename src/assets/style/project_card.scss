@@ -3,6 +3,9 @@
   height: 250px;
   :hover {
     background: rgba(0,0,0,0.4);
+    .project-skill {
+      display: block;
+    }
   }
 }
 
@@ -13,6 +16,7 @@
 }
 
 .project-skill {
+  display: none;
   position: absolute;
   top: 5px;
   right: 5px;
