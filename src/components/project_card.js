@@ -13,7 +13,7 @@ function ProjectCard(props) {
       <Card.ImgOverlay>
         <div className="project-card-text" >
           <Card.Title>{props.name}</Card.Title>
-          <Card.Text>{props.description} <strong>{props.name}</strong></Card.Text>
+          <Card.Text>{props.description}</Card.Text>
         </div>
         <Button variant="success" href={props.url} target="_blank" rel="noopener noreferrer">Visit Page</Button>
       </Card.ImgOverlay>

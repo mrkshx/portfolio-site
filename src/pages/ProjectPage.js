@@ -20,10 +20,10 @@ function ProjectPage(props) {
         <Container>
           <h4>Web Apps</h4>
           <ProjectCard
-            name="Example1"
-            description="This is an example description about the app"
-            url="https://google.com"
-            image={landing_image}
+            name="Cars B'n'B"
+            description="A simple car booking application with functionality to review a booking"
+            url="https://cars-bnb.herokuapp.com/"
+            image="https://source.unsplash.com/axTvnbgRlAk"
           />
           <ProjectCard
             name="Example2"
