@@ -8,6 +8,8 @@ import ConstructionBanner from '../components/construction';
 
 import '../assets/style/projectpage.scss';
 
+import landing_image from '../assets/images/12836.jpg';
+
 
 function ProjectPage(props) {
 
@@ -21,11 +23,13 @@ function ProjectPage(props) {
             name="Example1"
             description="This is an example description about the app"
             url="https://google.com"
+            image={landing_image}
           />
           <ProjectCard
             name="Example2"
             description="This is an example description about the app"
             url="https://google.com"
+            image={landing_image}
           />
         </Container>
         <Container fluid={true} >

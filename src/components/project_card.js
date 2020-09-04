@@ -3,14 +3,13 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 import '../assets/style/project_card.scss';
-import landing_image from '../assets/images/12836.jpg';
 
 
 function ProjectCard(props) {
 
   return(
     <Card className="project-card" text="white" >
-      <Card.Img className="project-image" src={landing_image} alt="Card image" />
+      <Card.Img className="project-image" src={props.image} alt="Card image" />
       <Card.ImgOverlay>
         <div className="project-card-text" >
           <Card.Title>{props.name}</Card.Title>
