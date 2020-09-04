@@ -3,17 +3,21 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 import '../assets/style/project_card.scss';
+import landing_image from '../assets/images/12836.jpg';
 
 
 function ProjectCard(props) {
 
   return(
-    <Card className="project-card" bg="dark" text="white" >
-      <Card.Header as="h5">{props.name}</Card.Header>
-      <Card.Body>
-        <Card.Text>{props.description} <strong>{props.name}</strong></Card.Text>
+    <Card className="project-card" text="white" >
+      <Card.Img className="project-image" src={landing_image} alt="Card image" />
+      <Card.ImgOverlay>
+        <div className="project-card-text" >
+          <Card.Title>{props.name}</Card.Title>
+          <Card.Text>{props.description} <strong>{props.name}</strong></Card.Text>
+        </div>
         <Button variant="success" href={props.url} target="_blank" rel="noopener noreferrer">Visit Page</Button>
-      </Card.Body>
+      </Card.ImgOverlay>
     </Card>
   );
 }

@@ -15,7 +15,7 @@ function ProjectPage(props) {
       <div id="projectpage" >
         <Hero title={props.title} ></Hero>
         <ConstructionBanner/>
-        <Container fluid={true} >
+        <Container>
           <h4>Web Apps</h4>
           <ProjectCard
             name="Example1"

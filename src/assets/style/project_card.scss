@@ -1,3 +1,24 @@
 .project-card {
   margin-bottom: 20px;
+  height: 250px;
+}
+
+.project-image {
+  height: 100%;
+  object-fit: fill;
+}
+
+.card-body {
+  margin-bottom: 15px !important;
+}
+
+.card-img-overlay {
+  padding: 0 !important;
+  .project-card-text {
+    background: repeating-linear-gradient(to right, rgba(0,0,0,0.3), transparent);
+    padding: 1.25rem;
+  }
+  .btn {
+    margin: 1.25rem;
+  }
 }
