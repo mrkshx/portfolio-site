@@ -10,7 +10,7 @@ function ProjectCard(props) {
   return(
     <Card className="project-card" text="white" >
       <Card.Img className="project-image" src={props.image} alt="Card image" />
-      <Card.ImgOverlay>
+      <Card.ImgOverlay className="project-card-img-overlay" >
         <div className="project-card-text" >
           <Card.Title>{props.name}</Card.Title>
           <Card.Text>{props.description}</Card.Text>
