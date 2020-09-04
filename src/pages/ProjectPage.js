@@ -32,7 +32,7 @@ function ProjectPage(props) {
             image={landing_image}
           />
         </Container>
-        <Container fluid={true} >
+        <Container>
           <h4>Mobile Apps</h4>
         </Container>
       </div>
