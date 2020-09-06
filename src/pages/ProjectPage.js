@@ -29,7 +29,7 @@ function ProjectPage(props) {
           <ProjectCard
             name="Example2"
             description="This is an example description about the app"
-            url="https://google.com"
+            url="#"
             image={landing_image}
             skills={[['fab', 'github']]}
           />
