@@ -3,6 +3,9 @@
   height: 250px;
   :hover {
     background: rgba(0,0,0,0.4);
+    .project-skill {
+      display: block;
+    }
   }
 }
 
@@ -10,6 +13,17 @@
   height: 100%;
   object-fit: cover;
   object-position: bottom;
+}
+
+.project-skill {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  pointer-events:none;
+  svg {
+    margin-left: 5px;
+  }
 }
 
 .project-card-img-overlay {
