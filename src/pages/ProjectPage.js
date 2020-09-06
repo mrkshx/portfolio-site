@@ -26,13 +26,6 @@ function ProjectPage(props) {
             image="https://source.unsplash.com/axTvnbgRlAk"
             skills={[['fas', 'gem'],['fab', 'html5'],['fab', 'css3'],['fab', 'js']]}
           />
-          <ProjectCard
-            name="Example2"
-            description="This is an example description about the app"
-            url="#"
-            image={landing_image}
-            skills={[['fab', 'github']]}
-          />
         </Container>
         <Container>
           <h4>Mobile Apps</h4>
