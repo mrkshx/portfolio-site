@@ -8,9 +8,6 @@ import ConstructionBanner from '../components/construction';
 
 import '../assets/style/projectpage.scss';
 
-import landing_image from '../assets/images/12836.jpg';
-
-
 function ProjectPage(props) {
 
   return(
