@@ -24,12 +24,14 @@ function ProjectPage(props) {
             description="A simple car booking application with functionality to review a booking"
             url="https://cars-bnb.herokuapp.com/"
             image="https://source.unsplash.com/axTvnbgRlAk"
+            skills={[['fab', 'github'],['fab', 'html5']]}
           />
           <ProjectCard
             name="Example2"
             description="This is an example description about the app"
             url="https://google.com"
             image={landing_image}
+            skills={[['fab', 'github']]}
           />
         </Container>
         <Container>

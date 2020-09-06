@@ -16,8 +16,11 @@ function ProjectCard(props) {
           <Card.Title>{props.name}</Card.Title>
           <Card.Text>{props.description}</Card.Text>
         </div>
-        <div>
-          <FontAwesomeIcon className="project-skill" icon={['fab', 'github']} size="2x"/>
+        <div className="project-skill">
+          {props.skills.map((skill) => (
+            <FontAwesomeIcon key={skill[1]} icon={skill} size="2x"/>
+          ))}
+          {/*<FontAwesomeIcon className="project-skill" icon={props.skills[0]} size="2x"/>*/}
         </div>
         <Button variant="success" href={props.url} target="_blank" rel="noopener noreferrer">Visit Page</Button>
       </Card.ImgOverlay>
