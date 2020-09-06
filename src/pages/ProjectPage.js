@@ -8,9 +8,6 @@ import ConstructionBanner from '../components/construction';
 
 import '../assets/style/projectpage.scss';
 
-import landing_image from '../assets/images/12836.jpg';
-
-
 function ProjectPage(props) {
 
   return(
@@ -25,13 +22,6 @@ function ProjectPage(props) {
             url="https://cars-bnb.herokuapp.com/"
             image="https://source.unsplash.com/axTvnbgRlAk"
             skills={[['fas', 'gem'],['fab', 'html5'],['fab', 'css3'],['fab', 'js']]}
-          />
-          <ProjectCard
-            name="Example2"
-            description="This is an example description about the app"
-            url="#"
-            image={landing_image}
-            skills={[['fab', 'github']]}
           />
         </Container>
         <Container>
