@@ -31,6 +31,7 @@ function ProjectPage(props) {
             name="Dicee"
             description="An app which rolls two dice"
             image="portfolio/dicee_static_lja9jb"
+            gif="portfolio/dicee_w320_vi4goa"
           />
         </Container>
       </div>
