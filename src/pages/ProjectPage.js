@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 
 import Hero from '../components/hero';
 import ProjectCard from '../components/project_card';
+import MobileProjectCard from '../components/mobile_project_card';
 
 import ConstructionBanner from '../components/construction';
 
@@ -26,6 +27,11 @@ function ProjectPage(props) {
         </Container>
         <Container>
           <h4>Mobile Apps</h4>
+          <MobileProjectCard
+            name="Dicee"
+            description="An app which rolls two dice"
+            image="portfolio/dicee_static_lja9jb"
+          />
         </Container>
       </div>
   );

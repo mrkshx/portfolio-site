@@ -9,7 +9,7 @@ function MobileProjectCard(props) {
 
   return(
     <Card className="mobile-project-card" text="white" >
-      <Image className="card-img mobile-project-image" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={props.image} width="320" />
+      <Image className="card-img mobile-project-image" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={props.image} />
       <Card.ImgOverlay className="mobile-project-card-img-overlay" >
         <div className="mobile-project-card-text" >
           <Card.Title>{props.name}</Card.Title>
