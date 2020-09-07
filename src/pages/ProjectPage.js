@@ -29,22 +29,22 @@ function ProjectPage(props) {
           <h4>Mobile Apps</h4>
           <div id="mobile_cards" >
             <MobileProjectCard
-              name="Dicee"
-              description="An app which rolls two dice"
-              image="portfolio/dicee_static_lja9jb"
-              gif="portfolio/dicee_w320_vi4goa"
+              name="BMI Calculator"
+              description="Give you info about your bmi depending on your input"
+              image="portfolio/bmi_static_tauwhu"
+              gif="portfolio/bmi_w320_mbjafj"
             />
             <MobileProjectCard
-              name="Dicee"
-              description="An app which rolls two dice"
-              image="portfolio/dicee_static_lja9jb"
-              gif="portfolio/dicee_w320_vi4goa"
+              name="Todoey"
+              description="This is a todo list. You can check a task as done and delete it"
+              image="portfolio/todoey_static_ryxy45"
+              gif="portfolio/todoey_w320_qegqgw"
             />
             <MobileProjectCard
-              name="Dicee"
-              description="An app which rolls two dice"
-              image="portfolio/dicee_static_lja9jb"
-              gif="portfolio/dicee_w320_vi4goa"
+              name="Clima"
+              description="Show weather info depending on GPS or manual input"
+              image="portfolio/clima_static_cgrnu6"
+              gif="portfolio/clima_w320_xpsfvm"
             />
           </div>
         </Container>

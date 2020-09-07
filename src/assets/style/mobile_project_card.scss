@@ -5,8 +5,12 @@
 .mobile-project-card {
   flex-basis: 100%;
   margin: 0 15px 15px 15px;
+  :hover {
+    .mobile-project-card-description {
+      display: none;
+    }
+  }
 }
-
 
 .mobile-project-card-img-overlay {
   padding: 0 !important;
@@ -17,9 +21,37 @@
   }
 }
 
-@media screen and (orientation: portrait) and (max-width: 820px) {
+.mobile-project-card-disclaimer {
+  text-align: center;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  font-size: 12px;
+  position: absolute;
+  bottom: 5px;
+}
+
+@media screen and (orientation: portrait) and (max-width: 620px) {
   .mobile-project-card {
     flex-basis: 100%;
     margin: 0 10px 10px 10px;
+  }
+
+  .mobile-project-card-img-overlay {
+    .mobile-project-card-header{
+      font-size: 0.9rem !important;
+    }
+    .mobile-project-card-description {
+      font-size: 0.6rem !important;
+    }
+    .mobile-project-card-text {
+      background: rgba(0,0,0,0.3);
+    }
+  }
+
+  .mobile-project-card-disclaimer {
+    background: rgba(0,0,0,0.4);
+    font-size: 0.2rem;
+    left: unset;
+    bottom: 1px;
   }
 }

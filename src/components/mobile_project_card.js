@@ -31,9 +31,12 @@ class MobileProjectCard extends Component {
         <Image className="card-img mobile-project-image" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={this.state.image} />
         <Card.ImgOverlay className="mobile-project-card-img-overlay" >
           <div className="mobile-project-card-text" >
-            <Card.Title>{this.props.name}</Card.Title>
-            <Card.Text>{this.props.description}</Card.Text>
+            <Card.Title className="mobile-project-card-header">{this.props.name}</Card.Title>
+            <Card.Text className="mobile-project-card-description" >{this.props.description}</Card.Text>
           </div>
+
+            <Card.Text className="mobile-project-card-disclaimer" >This app was developed during Flutter Bootcamp</Card.Text>
+
         </Card.ImgOverlay>
       </Card>
     );
