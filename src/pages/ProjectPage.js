@@ -27,12 +27,26 @@ function ProjectPage(props) {
         </Container>
         <Container>
           <h4>Mobile Apps</h4>
-          <MobileProjectCard
-            name="Dicee"
-            description="An app which rolls two dice"
-            image="portfolio/dicee_static_lja9jb"
-            gif="portfolio/dicee_w320_vi4goa"
-          />
+          <div id="mobile_cards" >
+            <MobileProjectCard
+              name="Dicee"
+              description="An app which rolls two dice"
+              image="portfolio/dicee_static_lja9jb"
+              gif="portfolio/dicee_w320_vi4goa"
+            />
+            <MobileProjectCard
+              name="Dicee"
+              description="An app which rolls two dice"
+              image="portfolio/dicee_static_lja9jb"
+              gif="portfolio/dicee_w320_vi4goa"
+            />
+            <MobileProjectCard
+              name="Dicee"
+              description="An app which rolls two dice"
+              image="portfolio/dicee_static_lja9jb"
+              gif="portfolio/dicee_w320_vi4goa"
+            />
+          </div>
         </Container>
       </div>
   );

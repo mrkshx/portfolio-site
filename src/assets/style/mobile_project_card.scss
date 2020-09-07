@@ -1,3 +1,25 @@
-.mobile-project-image {
-  display: inline;
+#mobile_cards {
+  display: flex;
+}
+
+.mobile-project-card {
+  flex-basis: 100%;
+  margin: 0 15px 15px 15px;
+}
+
+
+.mobile-project-card-img-overlay {
+  padding: 0 !important;
+  .mobile-project-card-text {
+    pointer-events:none;
+    background: rgba(0,0,0,0.6);
+    padding: 1.25rem;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 820px) {
+  .mobile-project-card {
+    flex-basis: 100%;
+    margin: 0 10px 10px 10px;
+  }
 }
