@@ -4,7 +4,7 @@
 
 .mobile-project-card {
   flex-basis: 100%;
-  margin: 0 15px 15px 15px;
+  margin: 0 15px 15px;
   :hover {
     .mobile-project-card-description {
       display: none;
@@ -33,7 +33,7 @@
 @media screen and (orientation: portrait) and (max-width: 620px) {
   .mobile-project-card {
     flex-basis: 100%;
-    margin: 0 10px 10px 10px;
+    margin: 0 10px 10px;
   }
 
   .mobile-project-card-img-overlay {
