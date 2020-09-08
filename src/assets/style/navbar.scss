@@ -4,6 +4,7 @@
   background-color: #26282C;
 
   .nav-link {
+    cursor: pointer;
     color: $white;
     &:hover {
       color: $light_green;
