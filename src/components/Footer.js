@@ -15,17 +15,17 @@ function Footer() {
         <Row id="footer-links" className="border-top p-2 justify-content-between" >
           <Col>
             <a className="footer-link" href="https://www.linkedin.com/in/markus-mengel" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={['fab', 'linkedin']} size="3x"/>
+              <FontAwesomeIcon icon={['fab', 'linkedin']} />
             </a>
           </Col>
           <Col>
             <a className="footer-link" href="https://github.com/mrkshx/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={['fab', 'github']} size="3x"/>
+              <FontAwesomeIcon icon={['fab', 'github']} />
             </a>
           </Col>
           <Col>
             <a className="footer-link" href="https://www.xing.com/profile/Markus_Mengel3" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={['fab', 'xing']} size="3x"/>
+              <FontAwesomeIcon icon={['fab', 'xing']} />
             </a>
           </Col>
         </Row>

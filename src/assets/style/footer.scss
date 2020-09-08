@@ -1,6 +1,11 @@
 @import 'colors.scss';
 
+footer {
+  max-height: 100px;
+}
+
 .footer-link {
+  font-size: 3em !important;
   color: $white;
   &:hover {
     color: $light_green;
@@ -14,7 +19,7 @@
 
 @media screen and (orientation: portrait) and (max-width: 820px) {
   .footer-link {
-    font-size: 0.6em;
+    font-size: 2.5em !important;
   }
   #footer-disclaimer {
     font-size: 0.8em;
@@ -25,14 +30,23 @@
   #footer-links {
     padding-bottom: 0 !important;
   }
+  .footer-link {
+    font-size: 2.3em !important;
+  }
   #footer-disclaimer {
     font-size: 0.7em;
   }
 }
 
 
-@media screen and (orientation: portrait) and (max-width: 640px) {
+@media screen and (orientation: portrait) and (max-height: 920px) {
   footer {
-    max-height: 70px;
+    height: 50px;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-height: 640px) {
+  footer {
+    height: 30px;
   }
 }
