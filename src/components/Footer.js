@@ -31,7 +31,7 @@ function Footer() {
         </Row>
         <Row>
           <Col className="text-right" >
-            <p>
+            <p id="footer-disclaimer" >
               This page was made by Markus Mengel // 2020
             </p>
           </Col>
