@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import { LinkContainer } from 'react-router-bootstrap';
 import './assets/style/app.scss';
 import './assets/style/navbar.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -56,18 +57,18 @@ class App extends Component {
           </Navbar.Toggle>
           <Navbar.Collapse id="navbar-toggle">
             <Nav className="ml-auto">
-              <Nav.Item>
-                <Nav.Link className="nav-link" href="/">Home</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link className="nav-link" href="/about" >About</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link className="nav-link" href="/projects" >Projects</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link className="nav-link" href="/contact" >Contact</Nav.Link>
-              </Nav.Item>
+              <LinkContainer className="nav-link" exact to="/">
+                <Nav.Item className="nav-link">Home</Nav.Item>
+              </LinkContainer>
+              <LinkContainer exact to="/about" >
+                <Nav.Item className="nav-link">About</Nav.Item>
+              </LinkContainer>
+              <LinkContainer exact to="/projects" >
+                <Nav.Item className="nav-link" >Projects</Nav.Item>
+              </LinkContainer>
+              <LinkContainer exact to="/contact" >
+                <Nav.Item className="nav-link">Contact</Nav.Item>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
