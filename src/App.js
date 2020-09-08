@@ -57,14 +57,14 @@ class App extends Component {
           </Navbar.Toggle>
           <Navbar.Collapse id="navbar-toggle">
             <Nav className="ml-auto">
-              <LinkContainer className="nav-link" exact to="/">
+              <LinkContainer exact to="/">
                 <Nav.Item className="nav-link">Home</Nav.Item>
               </LinkContainer>
               <LinkContainer exact to="/about" >
                 <Nav.Item className="nav-link">About</Nav.Item>
               </LinkContainer>
               <LinkContainer exact to="/projects" >
-                <Nav.Item className="nav-link" >Projects</Nav.Item>
+                <Nav.Item className="nav-link">Projects</Nav.Item>
               </LinkContainer>
               <LinkContainer exact to="/contact" >
                 <Nav.Item className="nav-link">Contact</Nav.Item>
