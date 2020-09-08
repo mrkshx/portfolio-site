@@ -7,3 +7,32 @@
   }
 }
 
+#footer-disclaimer {
+  margin: 0 !important;
+}
+
+
+@media screen and (orientation: portrait) and (max-width: 820px) {
+  .footer-link {
+    font-size: 0.6em;
+  }
+  #footer-disclaimer {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 420px) {
+  #footer-links {
+    padding-bottom: 0 !important;
+  }
+  #footer-disclaimer {
+    font-size: 0.7em;
+  }
+}
+
+
+@media screen and (orientation: portrait) and (max-width: 640px) {
+  footer {
+    max-height: 70px;
+  }
+}

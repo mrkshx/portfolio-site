@@ -12,7 +12,7 @@ function Footer() {
   return(
     <footer>
       <Container fluid={true} >
-        <Row className="border-top p-4 justify-content-between" >
+        <Row id="footer-links" className="border-top p-2 justify-content-between" >
           <Col>
             <a className="footer-link" href="https://www.linkedin.com/in/markus-mengel" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={['fab', 'linkedin']} size="3x"/>
@@ -31,7 +31,7 @@ function Footer() {
         </Row>
         <Row>
           <Col className="text-right" >
-            <p>
+            <p id="footer-disclaimer" >
               This page was made by Markus Mengel // 2020
             </p>
           </Col>
