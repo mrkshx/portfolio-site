@@ -2,11 +2,16 @@
 
 #navbar {
   background-color: #26282C;
-  a {
+
+  .nav-link {
+    cursor: pointer;
     color: $white;
     &:hover {
       color: $light_green;
     }
+  }
+  .nav-link.active {
+    color: $light_green;
   }
 }
 
