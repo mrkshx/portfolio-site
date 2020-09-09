@@ -27,7 +27,7 @@ class App extends Component {
       home: {
         name: 'Markus Mengel',
         title: 'Full-Stack and Mobile Developer',
-        subtitle: 'Exited to learn more skills and build cool projects',
+        subtitle: 'Excited to learn more skills and build cool projects',
       },
       about: {
         title: 'About Me',
