@@ -14,7 +14,6 @@ function ProjectPage(props) {
   return(
       <div id="projectpage" >
         <Hero title={props.title} ></Hero>
-        <ConstructionBanner/>
         <Container>
           <h4>Web Apps</h4>
           <ProjectCard
