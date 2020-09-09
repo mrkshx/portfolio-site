@@ -1,4 +1,5 @@
 import React from 'react';
+import firebase from "../FireStore";
 import Container from 'react-bootstrap/Container';
 
 import Hero from '../components/hero';
@@ -9,11 +10,28 @@ import '../assets/style/projectpage.scss';
 
 function ProjectPage(props) {
 
+  const showProjects = () => {
+    const db = firebase.firestore();
+    db.collection("projects").get().then((querySnapshot) => {
+      querySnapshot.forEach((project) => {
+        return(
+          <ProjectCard
+            name={project.name}
+            description={project.description}
+            url={project.url}
+            image={project.image}
+          />
+        );
+      });
+    })
+  }
+
   return(
       <div id="projectpage" >
         <Hero title={props.title} ></Hero>
         <Container>
           <h4>Web Apps</h4>
+          {showProjects()}
           <ProjectCard
             name="Cars B'n'B"
             description="A simple car booking application with functionality to review a booking"
