@@ -5,8 +5,6 @@ import Hero from '../components/hero';
 import ProjectCard from '../components/project_card';
 import MobileProjectCard from '../components/mobile_project_card';
 
-import ConstructionBanner from '../components/construction';
-
 import '../assets/style/projectpage.scss';
 
 function ProjectPage(props) {
@@ -14,7 +12,6 @@ function ProjectPage(props) {
   return(
       <div id="projectpage" >
         <Hero title={props.title} ></Hero>
-        <ConstructionBanner/>
         <Container>
           <h4>Web Apps</h4>
           <ProjectCard
