@@ -12,7 +12,8 @@ class ProjectPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: []
+      projects: [],
+      mobile_projects: []
     }
   }
 
@@ -21,6 +22,14 @@ class ProjectPage extends Component {
     db.collection("projects").get().then((querySnapshot) => {
       const projects = querySnapshot.docs.map(project => project.data());
       this.setState({projects});
+    })
+  }
+
+  getMobileProjects = () => {
+    const db = firebase.firestore();
+    db.collection("mobile_projects").get().then((querySnapshot) => {
+      const mobile_projects = querySnapshot.docs.map(m_project => m_project.data());
+      this.setState({mobile_projects});
     })
   }
 
@@ -39,8 +48,23 @@ class ProjectPage extends Component {
     });
   }
 
+  showMobileProjects = () => {
+    return this.state.mobile_projects.map((m_project, index) => {
+      return(
+        <MobileProjectCard
+          key={index}
+          name={m_project.name}
+          description={m_project.description}
+          image={m_project.image}
+          gif={m_project.gif}
+        />
+      );
+    });
+  }
+
   componentDidMount() {
     this.getProjects()
+    this.getMobileProjects()
   }
 
 
@@ -55,24 +79,7 @@ class ProjectPage extends Component {
           <Container>
             <h4>Mobile Apps</h4>
             <div id="mobile_cards" >
-              <MobileProjectCard
-                name="BMI Calculator"
-                description="Give you info about your bmi depending on your input"
-                image="portfolio/bmi_static_tauwhu"
-                gif="portfolio/bmi_w320_mbjafj"
-              />
-              <MobileProjectCard
-                name="Todoey"
-                description="This is a todo list. You can check a task as done and delete it"
-                image="portfolio/todoey_static_ryxy45"
-                gif="portfolio/todoey_w320_qegqgw"
-              />
-              <MobileProjectCard
-                name="Clima"
-                description="Show weather info depending on GPS or manual input"
-                image="portfolio/clima_static_cgrnu6"
-                gif="portfolio/clima_w320_xpsfvm"
-              />
+              {this.showMobileProjects()}
             </div>
           </Container>
         </div>
