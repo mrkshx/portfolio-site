@@ -12,25 +12,37 @@ class ProjectPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: ""
+      projects: []
     }
   }
 
-  showProjects = () => {
+  getProjects = () => {
     const db = firebase.firestore();
     db.collection("projects").get().then((querySnapshot) => {
-      querySnapshot.forEach((project) => {
-        return(
-          <ProjectCard
-            name={project.name}
-            description={project.description}
-            url={project.url}
-            image={project.image}
-          />
-        );
-      });
+      const projects = querySnapshot.docs.map(project => project.data());
+      this.setState({projects});
     })
   }
+
+  showProjects = () => {
+    return this.state.projects.map((project, index) => {
+      return(
+        <ProjectCard
+          key={index}
+          name={project.name}
+          description={project.description}
+          url={project.url}
+          image={project.image}
+          skills={[['fas', 'gem'],['fab', 'html5'],['fab', 'css3'],['fab', 'js']]}
+        />
+      );
+    });
+  }
+
+  componentDidMount() {
+    this.getProjects()
+  }
+
 
   render() {
     return(
@@ -38,13 +50,7 @@ class ProjectPage extends Component {
           <Hero title={this.props.title} ></Hero>
           <Container>
             <h4>Web Apps</h4>
-            <ProjectCard
-              name="Cars B'n'B"
-              description="A simple car booking application with functionality to review a booking"
-              url="https://cars-bnb.herokuapp.com/"
-              image="https://source.unsplash.com/axTvnbgRlAk"
-              skills={[['fas', 'gem'],['fab', 'html5'],['fab', 'css3'],['fab', 'js']]}
-            />
+            {this.showProjects()}
           </Container>
           <Container>
             <h4>Mobile Apps</h4>
