@@ -11,7 +11,6 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import skills_array from './constants/skills';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
@@ -31,7 +30,6 @@ class App extends Component {
       },
       about: {
         title: 'About Me',
-        skills: skills_array
       },
       contact: {
         title: 'Contact Me'
@@ -75,7 +73,7 @@ class App extends Component {
         <Container className="p-0 appbody" fluid={true}>
           <Route path='/' exact render={() => <HomePage name={this.state.home.name} title={this.state.home.title} subtitle={this.state.home.subtitle} skills={this.state.home.skills} />} />
           <Route path='/contact' exact render={() => <ContactPage title={this.state.contact.title} />} />
-          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} skills={this.state.about.skills}/>} />
+          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} />} />
           <Route path='/projects' exact render={() => <ProjectPage title={this.state.projects.title}/>} />
           <Footer/>
         </Container>
