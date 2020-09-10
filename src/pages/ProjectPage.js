@@ -19,18 +19,20 @@ class ProjectPage extends Component {
 
   getProjects = () => {
     const db = firebase.firestore();
-    db.collection("projects").get().then((querySnapshot) => {
-      const projects = querySnapshot.docs.map(project => project.data());
-      this.setState({projects});
-    })
+    db.collection("projects")
+      .onSnapshot((querySnapshot) => {
+        const projects = querySnapshot.docs.map(project => project.data());
+        this.setState({projects});
+      })
   }
 
   getMobileProjects = () => {
     const db = firebase.firestore();
-    db.collection("mobile_projects").get().then((querySnapshot) => {
-      const mobile_projects = querySnapshot.docs.map(m_project => m_project.data());
-      this.setState({mobile_projects});
-    })
+    db.collection("mobile_projects")
+      .onSnapshot((querySnapshot) => {
+        const mobile_projects = querySnapshot.docs.map(m_project => m_project.data());
+        this.setState({mobile_projects});
+      })
   }
 
   showProjects = () => {
