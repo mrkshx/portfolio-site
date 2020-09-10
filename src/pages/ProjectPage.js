@@ -33,7 +33,7 @@ class ProjectPage extends Component {
           description={project.description}
           url={project.url}
           image={project.image}
-          skills={[['fas', 'gem'],['fab', 'html5'],['fab', 'css3'],['fab', 'js']]}
+          skills={project.skills}
         />
       );
     });

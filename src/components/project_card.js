@@ -18,7 +18,7 @@ function ProjectCard(props) {
         </div>
         <div className="project-skill">
           {props.skills.map((skill) => (
-            <FontAwesomeIcon key={skill[1]} icon={skill} size="2x"/>
+            <FontAwesomeIcon key={skill.symbol} icon={[skill.type, skill.symbol]} size="2x"/>
           ))}
         </div>
         <Button variant="success" href={props.url} target="_blank" rel="noopener noreferrer">Visit Page</Button>
