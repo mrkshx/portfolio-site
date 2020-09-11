@@ -21,7 +21,7 @@ function HomePage(props) {
           <Card.Text id="landing-card-subtitle" >{props.subtitle}</Card.Text>
           <Button className="landing-btn" variant="info" size="lg" href="/projects">My Projects</Button>
           <Button className="landing-btn" variant="success" size="lg" href="/contact">Contact Me</Button>
-          <Image  id="landing-avatar" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId="landing_avatar_oerydq" width="350" height="350" radius="max" />
+          <Image  id="landing-avatar" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId="portfolio/landing_avatar_oerydq" width="350" height="350" radius="max" />
         </Card.ImgOverlay>
       </Card>
     </div>
