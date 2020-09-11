@@ -56,7 +56,6 @@ class ProjectPage extends Component {
           name={m_project.name}
           description={m_project.description}
           image={m_project.image}
-          gif={m_project.gif}
         />
       );
     });
