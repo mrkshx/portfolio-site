@@ -9,26 +9,30 @@ class MobileProjectCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      image: props.image,
+      image: `${this.props.image}_image`,
     }
   }
 
   handleMouseEnter = () => {
     this.setState({
-      image: this.props.gif
+      image: `${this.props.image}_gif`
     })
   };
 
   handleMouseLeave = () => {
     this.setState({
-      image: this.props.image
+      image: `${this.props.image}_image`
     })
   };
 
   render() {
     return(
       <Card className="mobile-project-card" text="white" onMouseOver={this.handleMouseEnter} onMouseOut={this.handleMouseLeave}>
-        <Image className="card-img mobile-project-image" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={this.state.image} />
+        <picture>
+          <source srcSet={`https://res.cloudinary.com/dyrcmbg1b/image/upload/${this.state.image}_webp`} />
+          <source srcSet={`https://res.cloudinary.com/dyrcmbg1b/image/upload/${this.state.image}`} />
+          <Image className="card-img mobile-project-image" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={`${this.state.image}`} alt={`${this.props.name} image`} />
+        </picture>
         <Card.ImgOverlay className="mobile-project-card-img-overlay" >
           <div className="mobile-project-card-text" >
             <Card.Title className="mobile-project-card-header">{this.props.name}</Card.Title>
