@@ -9,19 +9,19 @@ class MobileProjectCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      image: props.image,
+      image: `${this.props.image}_image`,
     }
   }
 
   handleMouseEnter = () => {
     this.setState({
-      image: this.props.gif
+      image: `${this.props.image}_gif`
     })
   };
 
   handleMouseLeave = () => {
     this.setState({
-      image: this.props.image
+      image: `${this.props.image}_image`
     })
   };
 
