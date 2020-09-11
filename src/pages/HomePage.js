@@ -3,8 +3,6 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {Image} from 'cloudinary-react';
 
-import landing_image from '../assets/images/12836.jpg';
-
 import '../assets/style/homepage.scss';
 
 
