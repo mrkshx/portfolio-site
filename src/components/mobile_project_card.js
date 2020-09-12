@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
-import {Image} from 'cloudinary-react';
+import { Image, Transformation } from 'cloudinary-react';
 
 import '../assets/style/mobile_project_card.scss';
 
@@ -28,11 +28,9 @@ class MobileProjectCard extends Component {
   render() {
     return(
       <Card className="mobile-project-card" text="white" onMouseOver={this.handleMouseEnter} onMouseOut={this.handleMouseLeave}>
-        <picture>
-          <source srcSet={`https://res.cloudinary.com/dyrcmbg1b/image/upload/${this.state.image}_webp`} />
-          <source srcSet={`https://res.cloudinary.com/dyrcmbg1b/image/upload/${this.state.image}`} />
-          <Image className="card-img mobile-project-image" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={`${this.state.image}`} alt={`${this.props.name} image`} />
-        </picture>
+        <Image className="card-img mobile-project-image" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={`${this.state.image}`} alt={`${this.props.name} image`}>
+          <Transformation quality="auto" fetchFormat="auto"/>
+        </Image>
         <Card.ImgOverlay className="mobile-project-card-img-overlay" >
           <div className="mobile-project-card-text" >
             <Card.Title className="mobile-project-card-header">{this.props.name}</Card.Title>
