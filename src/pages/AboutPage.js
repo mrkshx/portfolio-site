@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import firebase from "../FireStore";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import {Image} from 'cloudinary-react';
+import { Image, Transformation } from 'cloudinary-react';
 
 import Hero from '../components/hero';
 import SkillCard from '../components/skill_card';
@@ -46,11 +46,9 @@ class AboutPage extends Component {
         <div id="aboutpage" >
             <Hero title={this.props.title} />
             <Container>
-              <picture>
-                <source srcSet="https://res.cloudinary.com/dyrcmbg1b/image/upload/w_250,h_250/v1599827809/portfolio/landing_avatar_j85x2i.webp" type="image/webp" />
-                <source srcSet="https://res.cloudinary.com/dyrcmbg1b/image/upload/w_250,h_250/v1598405036/portfolio/landing_avatar_oerydq.jpg" type="image/jpeg" />
-                <Image className="avatar mb-5" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId="portfolio/landing_avatar_oerydq" alt="About Avatar" width="250" height="250" radius="max" />
-              </picture>
+              <Image className="avatar mb-5" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId="portfolio/landing_avatar_webp" alt="About Avatar" >
+                <Transformation quality="auto" fetchFormat="auto" radius="max" />
+              </Image>
               <p>Hey, I'm Markus. This year I started my journey in the career path of Software Development.</p>
               <p>So I joined an onsite Bootcamp for Web Development where I learnt Ruby, Ruby on Rails, Javascript, Bootstrap, Heroku, etc.</p>
               <p>Right after that, I attended another Bootcamp online. This course teached me how to develop Mobile Applications with Flutter and Dart. I also got insights in Firebase</p>
