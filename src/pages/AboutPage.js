@@ -46,8 +46,8 @@ class AboutPage extends Component {
         <div id="aboutpage" >
             <Hero title={this.props.title} />
             <Container>
-              <Image className="avatar mb-5" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId="portfolio/landing_avatar_webp" alt="About Avatar" >
-                <Transformation quality="auto" fetchFormat="auto" radius="max" />
+              <Image className="avatar mb-5" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId="portfolio/landing_avatar" alt="About Avatar" >
+                <Transformation quality="auto" fetchFormat="auto" width="400" crop="scale" />
               </Image>
               <p>Hey, I'm Markus. This year I started my journey in the career path of Software Development.</p>
               <p>So I joined an onsite Bootcamp for Web Development where I learnt Ruby, Ruby on Rails, Javascript, Bootstrap, Heroku, etc.</p>
