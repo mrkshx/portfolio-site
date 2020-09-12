@@ -29,7 +29,7 @@ class MobileProjectCard extends Component {
     return(
       <Card className="mobile-project-card" text="white" onMouseOver={this.handleMouseEnter} onMouseOut={this.handleMouseLeave}>
         <Image className="card-img mobile-project-image" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={`${this.state.image}`} alt={`${this.props.name} image`}>
-          <Transformation quality="auto" fetchFormat="auto"/>
+          <Transformation quality="auto" fetchFormat="auto" width="450" crop="scale"/>
         </Image>
         <Card.ImgOverlay className="mobile-project-card-img-overlay" >
           <div className="mobile-project-card-text" >
