@@ -36,9 +36,7 @@ class MobileProjectCard extends Component {
             <Card.Title className="mobile-project-card-header">{this.props.name}</Card.Title>
             <Card.Text className="mobile-project-card-description" >{this.props.description}</Card.Text>
           </div>
-
-            <Card.Text className="mobile-project-card-disclaimer" >This app was developed during Flutter Bootcamp</Card.Text>
-
+          <Card.Text className="mobile-project-card-disclaimer" >This app was developed during Flutter Bootcamp</Card.Text>
         </Card.ImgOverlay>
       </Card>
     );
