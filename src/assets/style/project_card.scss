@@ -1,4 +1,6 @@
 .project-card {
+  overflow: hidden;
+  border-radius: 1em !important;
   margin-bottom: 20px;
   height: 250px;
   :hover {
@@ -10,6 +12,7 @@
 }
 
 .project-image {
+  border-radius: 1em !important;
   height: 100%;
   object-fit: cover;
   object-position: bottom;
