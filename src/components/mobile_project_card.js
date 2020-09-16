@@ -11,8 +11,6 @@ class MobileProjectCard extends Component {
     this.state = {
       image: `${this.props.image}_image`,
       disabled: false,
-      autoplay: false,
-      currenttime: 0
     }
   }
 
@@ -20,8 +18,6 @@ class MobileProjectCard extends Component {
     this.setState({
       image: `${this.props.image}_mp4`,
       disabled: true,
-      autoplay: true,
-      currenttime: 0
     })
   };
 
