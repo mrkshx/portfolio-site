@@ -4,7 +4,13 @@
   justify-content: space-between;
 }
 
+.mobile-project-image {
+  border-radius: 2vw !important;
+}
+
 .mobile-project-card {
+  border-radius: 2vw !important;
+  overflow: hidden;
   width: 32%;
   margin-bottom: 25px;
   :hover {
