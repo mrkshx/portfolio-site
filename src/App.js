@@ -25,7 +25,7 @@ class App extends Component {
     this.state = {
       home: {
         name: 'Markus Mengel',
-        title: 'Full-Stack and Mobile Developer',
+        title: ['Full-Stack', 'Mobile', 'Frontend'],
         subtitle: 'Excited to learn more skills and build cool projects',
       },
       about: {

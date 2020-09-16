@@ -28,6 +28,7 @@
     text-shadow: 3px 3px $shadow;
   }
   h3 {
+    display: flex;
     border-bottom: 0;
     font-size: 3rem !important;
     font-weight: bold;
@@ -68,6 +69,9 @@ picture {
 
 .landing-btn {
   margin: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder !important;
+  font-style: italic;
 }
 
 

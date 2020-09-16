@@ -45,7 +45,7 @@ class AboutPage extends Component {
     return(
         <div id="aboutpage" >
             <Hero title={this.props.title} />
-            <Container>
+            <Container id="aboutpage-body">
               <Image className="avatar mb-5" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId="portfolio/landing_avatar" alt="About Avatar" >
                 <Transformation quality="auto" fetchFormat="auto" width="400" crop="scale" />
               </Image>

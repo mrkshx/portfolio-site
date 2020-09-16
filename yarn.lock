@@ -9830,6 +9830,13 @@ react-transition-group@^4.4.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-typed.js@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-typed.js/-/react-typed.js-1.0.3.tgz#63d8febb9e1a68dff0b88613d697521463d9c7b2"
+  integrity sha512-wvGdQfogmQHbESsnOhpXnrTMEJgzmo9bwvzpQvoc6XpTbrqlxg5m/EhkeLZk9rXMwPnyMibnW7KSyo8yWrIzNA==
+  dependencies:
+    typed.js "^2.0.11"
+
 react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
@@ -11413,6 +11420,11 @@ type@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/type/-/type-2.0.0.tgz#5f16ff6ef2eb44f260494dae271033b29c09a9c3"
   integrity sha512-KBt58xCHry4Cejnc2ISQAF7QY+ORngsWfxezO68+12hKV6lQY8P/psIkcbjeHWn7MqcgciWJyCCevFMJdIXpow==
+
+typed.js@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.11.tgz#d298a91f959f11a3803bf48b841a6fadd29640d9"
+  integrity sha512-1ZORHalEyLob34q738mqmwp0pT6syMigB1SZuTItqdhovWBKFIt7I5uVALXAGQZCg2MCtihCt6uqkoqPJK+9iQ==
 
 typedarray@^0.0.6:
   version "0.0.6"

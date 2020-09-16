@@ -72,11 +72,11 @@ class ProjectPage extends Component {
         <div id="projectpage" >
           <Hero title={this.props.title} ></Hero>
           <Container>
-            <h4>Web Apps</h4>
+            <h4 className="project-category-header" >Web Apps</h4>
             {this.showProjects()}
           </Container>
           <Container>
-            <h4>Mobile Apps</h4>
+            <h4 className="project-category-header" >Mobile Apps</h4>
             <div id="mobile_cards" >
               {this.showMobileProjects()}
             </div>

@@ -1,4 +1,6 @@
 .project-card {
+  overflow: hidden;
+  border-radius: 1em !important;
   margin-bottom: 20px;
   height: 250px;
   :hover {
@@ -10,6 +12,7 @@
 }
 
 .project-image {
+  border-radius: 1em !important;
   height: 100%;
   object-fit: cover;
   object-position: bottom;
@@ -29,11 +32,22 @@
 .project-card-img-overlay {
   padding: 0 !important;
   .project-card-text {
+    font-family: 'Open Sans', sans-serif;
     pointer-events:none;
-    background: repeating-linear-gradient(to right, rgba(0,0,0,0.3), transparent);
+    background: repeating-linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
     padding: 1.25rem;
+    .card-title {
+    font-weight: bolder !important;
+    }
+    .card-text {
+      font-weight: bold !important;
+    }
   }
-  .btn {
-    margin: 1.25rem;
-  }
+}
+
+.project-btn {
+  margin: 1.25rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder !important;
+  font-style: italic;
 }
