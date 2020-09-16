@@ -45,7 +45,7 @@ class AboutPage extends Component {
     return(
         <div id="aboutpage" >
             <Hero title={this.props.title} />
-            <Container>
+            <Container id="aboutpage-body" >
               <picture>
                 <source srcSet="https://res.cloudinary.com/dyrcmbg1b/image/upload/w_250,h_250/v1599827809/portfolio/landing_avatar_j85x2i.webp" type="image/webp" />
                 <source srcSet="https://res.cloudinary.com/dyrcmbg1b/image/upload/w_250,h_250/v1598405036/portfolio/landing_avatar_oerydq.jpg" type="image/jpeg" />
