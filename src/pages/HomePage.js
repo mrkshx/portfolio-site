@@ -1,4 +1,5 @@
 import React from 'react';
+import Typed from 'react-typed.js';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {Image} from 'cloudinary-react';
@@ -19,7 +20,7 @@ function HomePage(props) {
         <Card.ImgOverlay id="landing-card-overlay" >
           <Card.Text> Hello, I'm </Card.Text>
           <Card.Header as="h1">{props.name}</Card.Header>
-          <Card.Header as="h3">{props.title}</Card.Header>
+          <Card.Header as="h3"><Typed strings={["Full-Stack ", "Mobile ", "Frontend "] } showCursor={true} loop={true} /><span>&nbsp;Developer</span> </Card.Header>
           <Card.Text id="landing-card-subtitle" >{props.subtitle}</Card.Text>
           <Button className="landing-btn" variant="info" size="lg" href="/projects">My Projects</Button>
           <Button className="landing-btn" variant="success" size="lg" href="/contact">Contact Me</Button>
