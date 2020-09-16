@@ -2,7 +2,9 @@
 
 #navbar {
   background-color: #26282C;
-
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: bold;
+  font-style: italic;
   .nav-link {
     cursor: pointer;
     color: $white;

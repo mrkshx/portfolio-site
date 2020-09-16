@@ -29,7 +29,21 @@
   }
 }
 
+.mobile-project-card-header, .mobile-project-card-description {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mobile-project-card-header {
+  font-weight: bolder !important;
+}
+
+.mobile-project-card-description {
+  font-weight: bold;
+}
+
 .mobile-project-card-disclaimer {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
   text-align: center;
   width: 100%;
   background: rgba(0,0,0,0.6);
