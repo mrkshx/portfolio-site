@@ -95,7 +95,7 @@ class ContactPage extends Component {
               </Form.Control.Feedback>
             </Form.Group>
 
-            <Button className="d-line-block mb-2" variant="success" type="submit" disabled={this.state.disabled} >
+            <Button id="form-btn" className="d-line-block mb-2" variant="success" type="submit" disabled={this.state.disabled} >
               Send
             </Button>
 

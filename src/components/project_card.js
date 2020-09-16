@@ -21,7 +21,7 @@ function ProjectCard(props) {
             <FontAwesomeIcon key={skill.symbol} icon={[skill.type, skill.symbol]} size="2x"/>
           ))}
         </div>
-        <Button variant="success" href={props.url} target="_blank" rel="noopener noreferrer">Visit Page</Button>
+        <Button className="project-btn" variant="success" href={props.url} target="_blank" rel="noopener noreferrer">Visit Page</Button>
       </Card.ImgOverlay>
     </Card>
   );
