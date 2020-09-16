@@ -28,6 +28,7 @@
     text-shadow: 3px 3px $shadow;
   }
   h3 {
+    display: flex;
     border-bottom: 0;
     font-size: 3rem !important;
     font-weight: bold;
