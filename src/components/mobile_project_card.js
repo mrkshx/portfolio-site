@@ -35,7 +35,7 @@ class MobileProjectCard extends Component {
         <Image hidden={this.state.disabled} className="card-img " cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={`${this.props.image}_image`} alt={`${this.props.name} image`}>
           <Transformation quality="auto" fetchFormat="auto" width="450" crop="scale" />
         </Image>
-        <Video ref={this.vidRef} hidden={!this.state.disabled} className="card-img" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={`${this.props.image}_mp4`} alt={`${this.props.name} image`} playsInline muted loop autoPlay >
+        <Video hidden={!this.state.disabled} className="card-img" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} publicId={`${this.props.image}_mp4`} alt={`${this.props.name} image`} playsInline muted loop autoPlay >
           <Transformation quality="auto" fetchFormat="auto"/>
         </Video>
 
