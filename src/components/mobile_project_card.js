@@ -38,7 +38,6 @@ class MobileProjectCard extends Component {
         <Video hidden={!this.state.disabled} className="card-img" cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} invalidate="true" publicId={`${this.props.image}_mp4`} alt={`${this.props.name} image`} playsInline muted loop autoPlay >
           <Transformation quality="auto" fetchFormat="auto"/>
         </Video>
-
         <Card.ImgOverlay className="mobile-project-card-img-overlay" >
           <div className="mobile-project-card-text" >
             <Card.Title className="mobile-project-card-header">{this.props.name}</Card.Title>
