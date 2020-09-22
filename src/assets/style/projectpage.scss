@@ -1,4 +1,4 @@
-
+@import 'colors.scss';
 
 #projectpage {
   flex: 1;
@@ -19,6 +19,7 @@
 }
 
 .fallback-mobile-project-card, .fallback-project-card {
+  background-color: $background_dark;
   border: 1px solid white;
   border-radius: 1em !important;
   text-align: center;
