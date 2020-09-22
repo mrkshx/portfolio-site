@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import firebase from "../FireStore";
 import Container from 'react-bootstrap/Container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Hero from '../components/hero';
-import ProjectCard from '../components/project_card';
-import MobileProjectCard from '../components/mobile_project_card';
-
+// import ProjectCard from '../components/project_card';
 import '../assets/style/projectpage.scss';
+const ProjectCard = lazy(() => import('../components/project_card'));
+const MobileProjectCard = lazy(() => import('../components/mobile_project_card'));
+
 
 class ProjectPage extends Component {
   constructor(props) {
@@ -33,17 +35,37 @@ class ProjectPage extends Component {
     })
   }
 
+  renderProjectLoader = () => {
+    return(
+      <div className="fallback-project-card">
+        <p>Loading</p>
+        <FontAwesomeIcon className="loading-spinner" icon={["fas", "spinner"]} spin size="4x"/>
+      </div>
+    );
+  }
+
+  renderMobileProjectLoader = () => {
+    return(
+      <div className="fallback-mobile-project-card">
+        <p>Loading</p>
+        <FontAwesomeIcon className="loading-spinner" icon={["fas", "spinner"]} spin size="4x"/>
+      </div>
+    );
+  }
+
   showProjects = () => {
     return this.state.projects.map((project, index) => {
       return(
-        <ProjectCard
-          key={index}
-          name={project.name}
-          description={project.description}
-          url={project.url}
-          image={project.image}
-          skills={project.skills}
-        />
+        <Suspense key={index} fallback={this.renderProjectLoader()}>
+          <ProjectCard
+            key={index}
+            name={project.name}
+            description={project.description}
+            url={project.url}
+            image={project.image}
+            skills={project.skills}
+          />
+        </Suspense>
       );
     });
   }
@@ -51,12 +73,14 @@ class ProjectPage extends Component {
   showMobileProjects = () => {
     return this.state.mobile_projects.map((m_project, index) => {
       return(
-        <MobileProjectCard
-          key={index}
-          name={m_project.name}
-          description={m_project.description}
-          image={m_project.image}
-        />
+        <Suspense key={index} fallback={this.renderMobileProjectLoader()}>
+          <MobileProjectCard
+            key={index}
+            name={m_project.name}
+            description={m_project.description}
+            image={m_project.image}
+          />
+        </Suspense>
       );
     });
   }
