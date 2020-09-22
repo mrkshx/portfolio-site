@@ -10,6 +10,9 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: bolder;
   font-style: italic;
+  font-size: 1.25rem !important;
+  color: $light_green;
+  text-shadow: 2px 2px $shadow;
 }
 
 #mobile_cards {
@@ -50,5 +53,11 @@
   .fallback-mobile-project-card {
     width: 48%;
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .project-category-header {
+    font-size: 1rem !important;
   }
 }
