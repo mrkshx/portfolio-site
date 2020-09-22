@@ -32,6 +32,19 @@
   }
 }
 
+.fallback-project-card {
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 1em !important;
+  margin-bottom: 20px;
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 15px 0;
+  }
+}
+
 .loading-spinner {
   color: white;
   margin-bottom: 25px;

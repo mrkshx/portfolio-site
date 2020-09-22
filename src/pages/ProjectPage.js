@@ -4,8 +4,9 @@ import Container from 'react-bootstrap/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Hero from '../components/hero';
-import ProjectCard from '../components/project_card';
+// import ProjectCard from '../components/project_card';
 import '../assets/style/projectpage.scss';
+const ProjectCard = lazy(() => import('../components/project_card'));
 const MobileProjectCard = lazy(() => import('../components/mobile_project_card'));
 
 
@@ -34,6 +35,15 @@ class ProjectPage extends Component {
     })
   }
 
+  renderProjectLoader = () => {
+    return(
+      <div className="fallback-project-card">
+        <p>Loading</p>
+        <FontAwesomeIcon className="loading-spinner" icon={["fas", "spinner"]} spin size="4x"/>
+      </div>
+    );
+  }
+
   renderMobileProjectLoader = () => {
     return(
       <div className="fallback-mobile-project-card">
@@ -46,14 +56,16 @@ class ProjectPage extends Component {
   showProjects = () => {
     return this.state.projects.map((project, index) => {
       return(
-        <ProjectCard
-          key={index}
-          name={project.name}
-          description={project.description}
-          url={project.url}
-          image={project.image}
-          skills={project.skills}
-        />
+        <Suspense key={index} fallback={this.renderProjectLoader()}>
+          <ProjectCard
+            key={index}
+            name={project.name}
+            description={project.description}
+            url={project.url}
+            image={project.image}
+            skills={project.skills}
+          />
+        </Suspense>
       );
     });
   }
