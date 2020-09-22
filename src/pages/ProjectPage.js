@@ -1,4 +1,4 @@
-import React, { Component, lazy } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import firebase from "../FireStore";
 import Container from 'react-bootstrap/Container';
 
@@ -33,6 +33,8 @@ class ProjectPage extends Component {
     })
   }
 
+  renderLoader = () => <p>Loading</p>;
+
   showProjects = () => {
     return this.state.projects.map((project, index) => {
       return(
@@ -51,12 +53,14 @@ class ProjectPage extends Component {
   showMobileProjects = () => {
     return this.state.mobile_projects.map((m_project, index) => {
       return(
-        <MobileProjectCard
-          key={index}
-          name={m_project.name}
-          description={m_project.description}
-          image={m_project.image}
-        />
+        <Suspense fallback={this.renderLoader()}>
+          <MobileProjectCard
+            key={index}
+            name={m_project.name}
+            description={m_project.description}
+            image={m_project.image}
+          />
+        </Suspense>
       );
     });
   }
