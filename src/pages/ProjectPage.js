@@ -1,6 +1,7 @@
 import React, { Component, lazy, Suspense } from 'react';
 import firebase from "../FireStore";
 import Container from 'react-bootstrap/Container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Hero from '../components/hero';
 import ProjectCard from '../components/project_card';
@@ -33,7 +34,14 @@ class ProjectPage extends Component {
     })
   }
 
-  renderLoader = () => <p>Loading</p>;
+  renderMobileProjectLoader = () => {
+    return(
+      <div className="fallback-mobile-project-card">
+        <p>Loading</p>
+        <FontAwesomeIcon className="loading-spinner" icon={["fas", "spinner"]} spin size="4x"/>
+      </div>
+    );
+  }
 
   showProjects = () => {
     return this.state.projects.map((project, index) => {
@@ -53,7 +61,7 @@ class ProjectPage extends Component {
   showMobileProjects = () => {
     return this.state.mobile_projects.map((m_project, index) => {
       return(
-        <Suspense fallback={this.renderLoader()}>
+        <Suspense key={index} fallback={this.renderMobileProjectLoader()}>
           <MobileProjectCard
             key={index}
             name={m_project.name}

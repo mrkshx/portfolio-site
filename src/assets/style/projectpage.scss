@@ -1,3 +1,5 @@
+
+
 #projectpage {
   flex: 1;
   overflow: auto;
@@ -8,4 +10,36 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: bolder;
   font-style: italic;
+}
+
+#mobile_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.fallback-mobile-project-card {
+  border: 1px solid white;
+  border-radius: 1em !important;
+  width: 32%;
+  margin-bottom: 25px;
+  text-align: center;
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 15px 0;
+  }
+}
+
+.loading-spinner {
+  color: white;
+  margin-bottom: 25px;
+}
+
+@media screen and (orientation: portrait) and (max-width: 620px) {
+  .fallback-mobile-project-card {
+    width: 48%;
+    margin-bottom: 20px;
+  }
 }
