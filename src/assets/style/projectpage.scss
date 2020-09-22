@@ -18,11 +18,9 @@
   justify-content: space-between;
 }
 
-.fallback-mobile-project-card {
+.fallback-mobile-project-card, .fallback-project-card {
   border: 1px solid white;
   border-radius: 1em !important;
-  width: 32%;
-  margin-bottom: 25px;
   text-align: center;
   p {
     font-family: 'Open Sans', sans-serif;
@@ -32,18 +30,15 @@
   }
 }
 
-.fallback-project-card {
-  border: 1px solid white;
-  text-align: center;
-  border-radius: 1em !important;
-  margin-bottom: 20px;
-  p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    margin: 0;
-    padding: 15px 0;
-  }
+.fallback-mobile-project-card {
+  width: 32%;
+  margin-bottom: 25px;
 }
+
+.fallback-project-card {
+  margin-bottom: 20px;
+}
+
 
 .loading-spinner {
   color: white;
