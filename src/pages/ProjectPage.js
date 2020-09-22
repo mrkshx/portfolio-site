@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, lazy } from 'react';
 import firebase from "../FireStore";
 import Container from 'react-bootstrap/Container';
 
 import Hero from '../components/hero';
 import ProjectCard from '../components/project_card';
-import MobileProjectCard from '../components/mobile_project_card';
-
 import '../assets/style/projectpage.scss';
+const MobileProjectCard = lazy(() => import('../components/mobile_project_card'));
+
 
 class ProjectPage extends Component {
   constructor(props) {
